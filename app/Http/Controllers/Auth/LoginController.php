@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -35,5 +37,63 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    /**
+     * find username or email
+     *
+     * @return string
+     */
+    public function username()
+    {
+        if (filter_var(request()->email, FILTER_VALIDATE_EMAIL)) {
+            return 'email';
+        } else {
+            return 'username';
+        }
+    }
+
+    /**
+     * login validtion
+     *
+     * @return string
+     */
+    public function loginValidation(Request $request)
+    {
+        $this->validate($request, [
+            'email' => 'required',
+            'password' => 'required',
+        ]);
+    }
+
+    /**
+     * attempt login with username or email 
+     *
+     * @return void
+     */
+    public function login(Request $request)
+    {
+        $this->loginValidation($request);
+
+        //attempt login with usename or email
+        Auth::attempt([$this->username() => $request->email, 'password' => $request->password]);
+
+        //was any of those correct ?
+        if (Auth::check()) {
+            //send them where they are going 
+            return redirect()->intended('/');
+        }
+
+        //Nope, something wrong during authentication 
+        return redirect()->back()->withErrors([
+            'credentials' => 'Invalid Credential'
+        ]);
+    }
+
+    //custom-logout
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        return redirect('/login');
     }
 }
