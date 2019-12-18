@@ -9,7 +9,7 @@
         <form action="{{ route('login') }}" method="POST">
             @csrf
             <div class="form-group">
-                <input type="text" placeholder="Username" name="email" class="form-control" value="{{ old('email') }}">
+                <input type="text" placeholder="Email/Username" name="email" class="form-control" value="{{ old('email') }}">
                 @error('email')
                     <span class="text-danger">
                         <strong>{{ $message }}</strong>

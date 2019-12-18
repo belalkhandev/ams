@@ -391,3 +391,13 @@ body {
     padding: 15px 10px;
     border-top: 1px solid #b7b7b7;
 }
+
+.content-page-title {
+    margin-bottom: 15px;
+}
+
+.content-page-title h3 {
+    font-size: 18px;
+    color: #000;
+    font-weight: 600;
+}

@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>{{ config('app.name', 'Login') }}</title>
+    <link rel="icon" href="{{ asset('assets/images/favicon.png') }}" type="image/png" sizes="16x16">
     <link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">
 </head>
 <body>

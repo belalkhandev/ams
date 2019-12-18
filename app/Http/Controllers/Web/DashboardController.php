@@ -9,6 +9,8 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return 'home page';
+        $data = [];
+
+        return view('dashboard.index')->with(array_merge($this->data, $data));
     }
 }

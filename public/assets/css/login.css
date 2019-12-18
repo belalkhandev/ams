@@ -78,7 +78,7 @@ body {
 
 .submit-btn {
     width: 100%;
-    background: #37A000;
+    background: #4864bd;
     border: none;
     color: #FFF;
     font-size: 16px;
@@ -90,7 +90,7 @@ body {
 }
 
 .submit-btn:hover {
-    background: #2b7702;
+    background: #364e9c;
     transition: 0.25s;
 }
 

@@ -10,4 +10,22 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    /**
+     * Default data
+     */
+    protected $data = [];
+
+    /**
+     * Default Data
+     * @author Belal Khan
+     */
+    public function __construct()
+    {
+        // Default variables
+        $this->data = [
+            'page_title' => 'Academic Management System',
+            'page_header' => 'Dashboard',
+        ];
+    }
 }
