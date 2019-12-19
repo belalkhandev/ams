@@ -162,7 +162,7 @@ body {
 
 /* main-content styles */
 .main-content {
-    padding: 12px;
+    padding: 15px;
     min-height: 100%;
 }
 
@@ -374,6 +374,8 @@ body {
 
 .box-header {
     padding: 10px 10px 5px 10px;
+    overflow: hidden;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 .box-title {
@@ -382,15 +384,16 @@ body {
     font-size: 16px;
     padding-bottom: 10px;
     font-weight: 600;
+    margin-right: 15px;
 }
 
 .box-body {
-    padding: 10px;
+    padding: 15px 10px;
 }
 
 .box-footer {
     padding: 15px 10px;
-    border-top: 1px solid #b7b7b7;
+    border-top: 1px solid #e4e4e4;
 }
 
 .content-page-title {
@@ -401,4 +404,14 @@ body {
     font-size: 18px;
     color: #000;
     font-weight: 600;
+}
+
+.has-error .form-control {
+    border-color: #d24343;
+}
+
+.has-error span {
+    margin-top: 5px;
+    display: block;
+    transition: 0.5s;
 }

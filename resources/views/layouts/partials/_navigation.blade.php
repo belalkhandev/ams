@@ -28,8 +28,8 @@
                 <span>Class</span>
                 <i class="fas fa-angle-right"></i></a>
             <ul class="treeview-menu">
-                <li><a href="#">New Class</a></li>
-                <li><a href="#">Class list</a></li>
+                <li><a href="{{ route('class.create') }}">New Class</a></li>
+                <li><a href="{{ route('class.index') }}">Class list</a></li>
             </ul>
         </li>
         <li class="treeview">
