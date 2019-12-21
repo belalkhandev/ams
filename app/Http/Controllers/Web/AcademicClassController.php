@@ -67,7 +67,7 @@ class AcademicClassController extends Controller
 
     }
 
-    public function delete()
+    public function destroy()
     {
 
     }

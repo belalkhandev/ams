@@ -415,3 +415,19 @@ body {
     display: block;
     transition: 0.5s;
 }
+
+.inline-element {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.inline-element a,
+.inline-element .btn {
+    margin-right: 5px;
+}
+
+.custom-btn-sm {
+    padding: 2px 5px;
+    font-size: 12px;
+}   
