@@ -25,3 +25,18 @@ if (!function_exists('getStatus')) {
         return $status;
     }
 }
+
+if (!function_exists('styleStatus')) {
+    function styleStatus($value)
+    {
+        $output = '';
+
+        if ($value == 1) {
+            $output .= '<span class="badge badge-success">Active</span>';
+        } else if ($value == 0) {
+            $output .= '<span class="badge badge-danger">Inactive</span>';
+        }
+
+        return $output;
+    }
+}

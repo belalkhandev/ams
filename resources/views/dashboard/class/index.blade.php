@@ -24,10 +24,14 @@
                                 <td>{{ $key+1 }}</td>
                                 <td>{{ $class->name }}</td>
                                 <td>{{ $class->numeric_name }}</td>
-                                <td>{{ $class->status }}</td>
-                                <td>
-                                    <a href=""><i class="fas fa-edit"></i></a>
-                                    <a href=""><i class="fas fa-trash"></i></a>
+                                <td>{!! styleStatus($class->status) !!}</td>
+                                <td class="inline-element">
+                                    <a href="{{ route('class.edit', $class->id) }}" data-toggle="tooltip" title="Delete" data-placement="top" class="custom-btn-sm btn btn-primary"><i class="fas fa-edit"></i></a>
+                                    {!! Form::open(['route' => ['class.destroy', $class->id], 'method' => 'DELETE', 'class'=>'inline-el']) !!}
+                                    <button type="submit" class="btn btn-danger custom-btn-sm" onclick="deleteSwal(this, event)" data-toggle="tooltip" title="Delete" data-placement="top">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                {!! Form::close() !!}
                                 </td>
                             </tr>
                         @endforeach

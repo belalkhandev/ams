@@ -35,7 +35,8 @@ Route::middleware(['auth'])->group(function () {
             Route::get('/create', 'AcademicClassController@create')->name('class.create');
             Route::post('/create', 'AcademicClassController@store')->name('class.store');
             Route::get('/{id}/edit', 'AcademicClassController@edit')->name('class.edit');
-            Route::post('/{id}/edit', 'AcademicClassController@update')->name('class.update');
+            Route::put('/{id}/edit', 'AcademicClassController@update')->name('class.update');
+            Route::delete('/{id}', 'AcademicClassController@destroy')->name('class.destroy');
         });
         
     });
