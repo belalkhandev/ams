@@ -24,7 +24,7 @@ class AcademicClassStoreFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
+            'name' => 'required|unique:academic_classes',
             'status' => 'required'
         ];
     }
