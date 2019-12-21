@@ -7,12 +7,16 @@
         var current = location.pathname;
         $('.navigation-menu ul li a').each(function () {
             var $this = $(this);
-            // if the current path is like this link, make it active
-            if ($this.attr('href').indexOf(current) !== -1) {
+             if (current == '/') {
+                 $('.index-link').closest('li').addClass('active');
+                 return false;
+             }else if ($this.attr('href').indexOf(current) !== -1) {
                 $this.closest('.treeview').addClass('active');
                 $this.closest('li').addClass('active');
             }
         })
+
+       
 
         //navigation active
         $(document).on('click', '.treeview a', function () {
