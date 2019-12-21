@@ -24,7 +24,7 @@ class AcademicClassUpdateFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
+            'name' => 'required|unique:academic_classes,name,'.$this->route('id'),
             'status' => 'required'
         ];
     }
