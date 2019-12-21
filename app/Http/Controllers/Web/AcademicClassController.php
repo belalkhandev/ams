@@ -67,8 +67,22 @@ class AcademicClassController extends Controller
 
     }
 
-    public function destroy()
+    public function destroy(AcademicClass $class, $id)
     {
+        $class = $class->findOrFail($id);
 
+        if ($class->delete()) {
+            return response()->json([
+                'type' => 'success',
+                'title' => 'Success!',
+                'message' => 'Class Deleted Successfully'
+            ]);
+        }
+
+        return response()->json([
+            'type' => 'error',
+            'title' => 'Failed!',
+            'message' => 'Failed to Delete Class'
+        ]);
     }
 }
