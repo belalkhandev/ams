@@ -38,6 +38,16 @@ Route::middleware(['auth'])->group(function () {
             Route::put('/{id}/edit', 'AcademicClassController@update')->name('class.update');
             Route::delete('/{id}', 'AcademicClassController@destroy')->name('class.destroy');
         });
+
+        //group manage
+        Route::prefix('group')->group(function () {
+            Route::get('/list', 'GroupController@index')->name('group.index');
+            Route::get('/create', 'GroupController@create')->name('group.create');
+            Route::post('/create', 'GroupController@store')->name('group.store');
+            Route::get('/{id}/edit', 'GroupController@edit')->name('group.edit');
+            Route::put('/{id}/edit', 'GroupController@update')->name('group.update');
+            Route::delete('/{id}', 'GroupController@destroy')->name('group.destroy');
+        });
         
     });
 });

@@ -38,8 +38,8 @@
                 <span>Group</span>
                 <i class="fas fa-angle-right"></i></a>
             <ul class="treeview-menu">
-                <li><a href="#">New Group</a></li>
-                <li><a href="#">Group List</a></li>
+                <li><a href="{{ route('group.create') }}">New Group</a></li>
+                <li><a href="{{ route('group.index') }}">Group list</a></li>
             </ul>
         </li>
         <li class="treeview">
