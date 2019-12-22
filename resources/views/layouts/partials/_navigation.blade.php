@@ -48,8 +48,8 @@
                 <span>Section</span>
                 <i class="fas fa-angle-right"></i></a>
             <ul class="treeview-menu">
-                <li><a href="#">New Section</a></li>
-                <li><a href="#">Section List</a></li>
+                <li><a href="{{ route('section.create') }}">New Section</a></li>
+                <li><a href="{{ route('section.index') }}">Section list</a></li>
             </ul>
         </li>
         <li class="treeview">

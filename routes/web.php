@@ -48,6 +48,16 @@ Route::middleware(['auth'])->group(function () {
             Route::put('/{id}/edit', 'GroupController@update')->name('group.update');
             Route::delete('/{id}', 'GroupController@destroy')->name('group.destroy');
         });
+
+        //Section manage
+        Route::prefix('section')->group(function () {
+            Route::get('/list', 'SectionController@index')->name('section.index');
+            Route::get('/create', 'SectionController@create')->name('section.create');
+            Route::post('/create', 'SectionController@store')->name('section.store');
+            Route::get('/{id}/edit', 'SectionController@edit')->name('section.edit');
+            Route::put('/{id}/edit', 'SectionController@update')->name('section.update');
+            Route::delete('/{id}', 'SectionController@destroy')->name('section.destroy');
+        });
         
     });
 });
