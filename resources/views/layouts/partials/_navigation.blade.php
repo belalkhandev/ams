@@ -25,6 +25,16 @@
         <li class="treeview">
             <a href="javascript:void(0)">
                 <i class="fas fa-list"></i>
+                <span>Sessions</span>
+                <i class="fas fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+                <li><a href="{{ route('session.create') }}">New Session</a></li>
+                <li><a href="{{ route('session.index') }}">Session List</a></li>
+            </ul>
+        </li>
+        <li class="treeview">
+            <a href="javascript:void(0)">
+                <i class="fas fa-list"></i>
                 <span>Class</span>
                 <i class="fas fa-angle-right"></i></a>
             <ul class="treeview-menu">

@@ -29,6 +29,16 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
         Route::get('/home', 'DashboardController@index')->name('home');
 
+        //Session manage
+        Route::prefix('session')->group(function () {
+            Route::get('/list', 'SessionController@index')->name('session.index');
+            Route::get('/create', 'SessionController@create')->name('session.create');
+            Route::post('/create', 'SessionController@store')->name('session.store');
+            Route::get('/{id}/edit', 'SessionController@edit')->name('session.edit');
+            Route::put('/{id}/edit', 'SessionController@update')->name('session.update');
+            Route::delete('/{id}', 'SessionController@destroy')->name('session.destroy');
+        });
+
         //class manage
         Route::prefix('class')->group(function () {
             Route::get('/list', 'AcademicClassController@index')->name('class.index');
