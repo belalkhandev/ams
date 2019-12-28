@@ -40,3 +40,18 @@ if (!function_exists('styleStatus')) {
         return $output;
     }
 }
+
+if (!function_exists('makeDropdownList')) {
+    function makeDropdownList($objects, $key='id', $value='name')
+    {
+        $dropdown_lists = [];
+
+        if ($objects) {
+            foreach ($objects as $object) {
+                $dropdown_lists[$object->$key] = $object->$value;
+            }
+        }
+
+        return $dropdown_lists;
+    }
+}

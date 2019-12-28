@@ -68,8 +68,8 @@
                 <span>Subject</span>
                 <i class="fas fa-angle-right"></i></a>
             <ul class="treeview-menu">
-                <li><a href="#">New Subject</a></li>
-                <li><a href="#">Subject List</a></li>
+                <li><a href="{{ route('subject.create') }}">New Subject</a></li>
+                <li><a href="{{ route('subject.index') }}">Subject List</a></li>
             </ul>
         </li>
         <li class="treeview">

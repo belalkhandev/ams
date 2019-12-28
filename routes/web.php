@@ -68,6 +68,18 @@ Route::middleware(['auth'])->group(function () {
             Route::put('/{id}/edit', 'SectionController@update')->name('section.update');
             Route::delete('/{id}', 'SectionController@destroy')->name('section.destroy');
         });
+
+        //Section manage
+        Route::prefix('subject')->group(function () {
+            Route::get('/list', 'SubjectController@index')->name('subject.index');
+            Route::get('/create', 'SubjectController@create')->name('subject.create');
+            Route::post('/create', 'SubjectController@store')->name('subject.store');
+            Route::get('/{id}/edit', 'SubjectController@edit')->name('subject.edit');
+            Route::put('/{id}/edit', 'SubjectController@update')->name('subject.update');
+            Route::delete('/{id}', 'SubjectController@destroy')->name('subject.destroy');
+        });
+        
+        
         
     });
 });
