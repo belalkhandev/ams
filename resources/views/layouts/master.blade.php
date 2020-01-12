@@ -25,7 +25,7 @@
             <!-- main-content-area -->
             <div class="main-content">
                 <div class="content-page-title">
-                    <h3>@yield('page_header', 'Dashboard')</h3>
+                    <h3>@yield('page_header', $page_header)</h3>
                 </div>
                 <div class="content">
                     {{-- all content goes to here --}}

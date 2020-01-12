@@ -1,0 +1,46 @@
+.form-group label {
+    color: #151822;
+    font-weight: 500;
+}
+
+.form-control {
+    border-radius: 0px;
+    box-shadow: none;
+    font-size: 14px;
+}
+
+.form-control:focus,
+.form-control:hover {
+    box-shadow: none;
+    border-color: #969cad;
+}
+
+.swal2-modal {
+    border-radius: 0px;
+    font-size: 14px;
+}
+
+.swal2-styled {
+    border-radius: 3px !important;
+}
+
+.swal2-styled:focus {
+    border: 0px;
+    box-shadow: none;
+}
+
+.swal2-confirm {
+    background: #4CAF50 !important;
+}
+
+.swal2-confirm:hover {
+    background: #3b8c3f !important;
+}
+
+.swal2-cancel {
+    background: #F44336 !important;
+}
+
+.swal2-cancel:hover {
+    background: #d8362a !important;
+}
