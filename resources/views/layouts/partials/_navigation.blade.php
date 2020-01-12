@@ -7,8 +7,8 @@
                 <span>Admission Management</span>
                 <i class="fas fa-angle-right"></i></a>
             <ul class="treeview-menu">
-                <li><a href="#">New Admission</a></li>
-                <li><a href="#">Admission List</a></li>
+                <li><a href="{{ route('admission.create') }}">New Admission</a></li>
+                <li><a href="{{ route('admission.index') }}">Admission List</a></li>
             </ul>
         </li>
         <li class="treeview">
@@ -60,6 +60,7 @@
             <ul class="treeview-menu">
                 <li><a href="{{ route('section.create') }}">New Section</a></li>
                 <li><a href="{{ route('section.index') }}">Section list</a></li>
+                <li><a href="{{ route('section.index') }}">Class Session</a></li>
             </ul>
         </li>
         <li class="treeview">
@@ -83,6 +84,28 @@
             </ul>
         </li>
         <li class="nav-title">Routine manage</li>
+        <li class="treeview">
+            <a href="javascript:void(0)">
+                <i class="fas fa-list"></i>
+                <span>Class Routine</span>
+                <i class="fas fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+                <li><a href="#">New Class Routine</a></li>
+                <li><a href="#">Class Routine list</a></li>
+            </ul>
+        </li>
+        <li class="treeview">
+            <a href="javascript:void(0)">
+                <i class="fas fa-list"></i>
+                <span>Exam Routine</span>
+                <i class="fas fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+                <li><a href="#">Exam Category</a></li>
+                <li><a href="#">New Exam Routine</a></li>
+                <li><a href="#">Exam Routine list</a></li>
+            </ul>
+        </li>
+        <li class="nav-title">People manage</li>
         <li class="treeview">
             <a href="javascript:void(0)">
                 <i class="fas fa-list"></i>

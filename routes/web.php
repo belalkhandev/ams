@@ -78,6 +78,27 @@ Route::middleware(['auth'])->group(function () {
             Route::put('/{id}/edit', 'SubjectController@update')->name('subject.update');
             Route::delete('/{id}', 'SubjectController@destroy')->name('subject.destroy');
         });
+
+
+        //Section Class Manage manage
+        Route::prefix('subject-class')->group(function () {
+            Route::get('/list', 'SubjectClassController@index')->name('subject-class.index');
+            Route::get('/create', 'SubjectClassController@create')->name('subject-class.create');
+            Route::post('/create', 'SubjectClassController@store')->name('subject-class.store');
+            Route::get('/{id}/edit', 'SubjectClassController@edit')->name('subject-class.edit');
+            Route::put('/{id}/edit', 'SubjectClassController@update')->name('subject-class.update');
+            Route::delete('/{id}', 'SubjectClassController@destroy')->name('subject-class.destroy');
+        });
+
+         //Admission manage
+         Route::prefix('admission')->group(function () {
+            Route::get('/', 'AdmissionController@index')->name('admission.index');
+            Route::get('/create', 'AdmissionController@create')->name('admission.create');
+            Route::post('/create', 'AdmissionController@store')->name('admission.store');
+            Route::get('/{id}/edit', 'AdmissionController@edit')->name('admission.edit');
+            Route::put('/{id}/edit', 'AdmissionController@update')->name('admission.update');
+            Route::delete('/{id}', 'AdmissionController@destroy')->name('admission.destroy');
+        });
         
         
         
