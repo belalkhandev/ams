@@ -21,7 +21,7 @@ class CreateStudentsTable extends Migration
             $table->string('last_name')->nullable();
             $table->string('father_name');
             $table->string('mother_name');            
-            $table->string('phone');
+            $table->string('phone')->nullable();
             $table->string('email')->nullable();
             $table->string('gender');
             $table->date('birthdate');
@@ -34,8 +34,6 @@ class CreateStudentsTable extends Migration
             $table->text('permanent_address')->nullable();
             $table->string('father_occupation')->nullable();
             $table->string('mother_occupation')->nullable();
-            $table->string('father_occupation_place')->nullable();
-            $table->string('mother_occupation_place')->nullable();
             $table->string('father_phone')->nullable();
             $table->string('mother_phone')->nullable();
             $table->string('photo')->nullable();
