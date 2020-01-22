@@ -7,7 +7,7 @@
         <!-- sidebar-for-menu-area -->
         <aside class="sidebar-area">
             <div class="logo">
-                <a href="{{ route('dashbboard.index') }}">
+                <a href="{{ route('dashboard') }}">
                     <h1>Academic Management</h1>
                 </a>
             </div>

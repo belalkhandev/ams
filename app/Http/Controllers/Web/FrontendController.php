@@ -16,4 +16,14 @@ class FrontendController extends Controller
 
         return view('frontend.index')->with(array_merge($this->data, $data));
     }
+
+    public function uncerConstruction()
+    {
+        $data = [
+            'page_title' => 'Under Construction',
+            'page_header' => 'Under Construction',
+        ];
+
+        return view('frontend.underconstruction')->with(array_merge($this->data, $data));
+    }
 }
