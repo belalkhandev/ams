@@ -11,8 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// frontendController
+Route::namespace('Web')->group(function () {
+    Route::get('/', 'FrontendController@index')->name('frontend.home');
 });
 
 //Auth::routes();
@@ -23,8 +24,7 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::middleware(['auth'])->group(function () {
     
-    Route::namespace('Web')->group(function () {        
-        Route::get('/', 'DashboardController@index')->name('dashbboard.index');
+    Route::namespace('Web')->group(function () { 
         Route::get('/admin', 'DashboardController@index')->name('admin');
         Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
         Route::get('/home', 'DashboardController@index')->name('home');
