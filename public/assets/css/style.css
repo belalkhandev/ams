@@ -430,4 +430,72 @@ body {
 .custom-btn-sm {
     padding: 2px 5px;
     font-size: 12px;
-}   
+}
+
+.form-section {
+    background: #eaeaea;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.form-section-title {
+    color: #1e2539;
+    font-size: 15px;
+    font-style: italic;
+}
+
+/* radio-box style */
+.radio-box-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.single-radio-box {
+    margin-right: 15px;
+}
+
+.radio-box-container {
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.input-radio-box {
+    position: absolute;
+    opacity: 0;
+}
+
+.radio-box-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background: #d6d6d6;
+    border-radius: 1px;
+    border: 1px solid #7b7b7b;
+}
+
+.radio-box-wrap::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 10px;
+    height: 10px;
+    background: #007bff;
+    border-radius: 1px;
+    opacity: 0;
+}
+
+.input-radio-box:checked~.radio-box-wrap {
+    border: 1px solid #007bff;
+}
+
+.input-radio-box:checked~.radio-box-wrap::after {
+    opacity: 1;
+    transition: 0.25s;
+}

@@ -1,6 +1,6 @@
 <nav class="navigation-menu">
     <ul>
-        <li><a href="{{ route('dashbboard.index') }}" class="index-link"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+        <li><a href="{{ route('dashboard') }}" class="index-link"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
         <li class="treeview">
             <a href="javascript:void(0)">
                 <i class="fas fa-list"></i>

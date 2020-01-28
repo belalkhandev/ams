@@ -15,11 +15,11 @@ class CreateAdmissionsTable extends Migration
     {
         Schema::create('admissions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('student_id');
-            $table->bigInteger('academic_class_id');
-            $table->bigInteger('group_id')->nullable();
-            $table->bigInteger('section_id')->nullable();
-            $table->bigInteger('session_id')->nullable();
+            $table->unsignedBigInteger('student_id');
+            $table->unsignedBigInteger('academic_class_id');
+            $table->unsignedBigInteger('group_id')->nullable();
+            $table->unsignedBigInteger('section_id')->nullable();
+            $table->unsignedBigInteger('session_id')->nullable();
             $table->date('admission_date');
             $table->timestamps();
 

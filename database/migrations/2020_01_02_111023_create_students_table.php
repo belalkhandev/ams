@@ -15,24 +15,30 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('user_id');
+            $table->unsignedBigInteger('user_id');
             $table->string('student_id');
-            $table->string('name');
+            $table->string('first_name');
+            $table->string('last_name')->nullable();
             $table->string('father_name');
-            $table->string('mother_name');
-            $table->string('father_occupation')->nullable();
-            $table->string('mother_occupation')->nullable();
-            $table->string('father_occupation_place')->nullable();
-            $table->string('mother_occupation_place')->nullable();
-            $table->string('phone');
+            $table->string('mother_name');            
+            $table->string('phone')->nullable();
             $table->string('email')->nullable();
             $table->string('gender');
             $table->date('birthdate');
             $table->string('birth_id')->nullable();
+            $table->string('category')->comment('general, obc, special, physically challenge')->nullable();
             $table->string('religion');
+            $table->string('caste')->nullable();
+            $table->string('blood_group')->nullable();
             $table->text('present_address')->nullable();
             $table->text('permanent_address')->nullable();
+            $table->string('father_occupation')->nullable();
+            $table->string('mother_occupation')->nullable();
+            $table->string('father_phone')->nullable();
+            $table->string('mother_phone')->nullable();
             $table->string('photo')->nullable();
+            $table->string('father_photo')->nullable();
+            $table->string('mother_photo')->nullable();
             $table->integer('status')->default(1)->comment('1=active, 0=inactive');
             $table->timestamps();
 
