@@ -108,6 +108,7 @@ Route::middleware(['auth'])->group(function () {
             //Notice  manage
             Route::prefix('notice')->group(function () {
                 Route::get('/', 'NoticeController@index')->name('notice.index');
+                Route::get('/show/{id}', 'NoticeController@show')->name('notice.show');
                 Route::get('/create', 'NoticeController@create')->name('notice.create');
                 Route::post('/create', 'NoticeController@store')->name('notice.store');
                 Route::get('/{id}/edit', 'NoticeController@edit')->name('notice.edit');

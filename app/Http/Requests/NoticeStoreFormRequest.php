@@ -23,9 +23,12 @@ class NoticeStoreFormRequest extends FormRequest
      */
     public function rules()
     {
-        return [
+        $rules = [
             'title' => 'required',
-            'publish_date' => 'required'
+            'publish_date' => 'required',
+            'notice_file' => 'max:10240|mimes:jpg,jpeg,png,pdf'
         ];
+
+        return $rules;
     }
 }

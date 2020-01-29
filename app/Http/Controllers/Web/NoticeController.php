@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\NoticeStoreFormRequest;
+use App\Http\Requests\NoticeUpdateFormRequest;
 use App\Models\Notice;
 use App\Services\Utility;
 use Illuminate\Http\Request;
@@ -41,7 +42,7 @@ class NoticeController extends Controller
 
         $notice = new Notice();
         $notice->title = $request->get('title');
-        $notice->content = $request->get('content');
+        $notice->content = $request->get('notice_content');
         $notice->attached_file = $path;
         $notice->publish_date = database_formatted_date($request->get('publish_date'));
         $notice->status = $request->get('status');
@@ -61,54 +62,84 @@ class NoticeController extends Controller
         ]);
     }
 
-    public function edit(Session $session, $id)
+    public function show(Notice $notice, $id)
     {
         $data = [
-            'page_title' => 'Update Session',
-            'page_header' => 'Update Session',
-            'Session' => $session->findOrFail($id)
+            'page_title' => 'Details of Notice',
+            'page_header' => 'Details of Notice',
+            'notice' => $notice->findOrFail($id)
         ];
 
-        return view('dashboard.Session.edit')->with(array_merge($this->data, $data));
+        return view('dashboard.notice.show')->with(array_merge($this->data, $data)); 
     }
 
-    public function update(SessionUpdateFormRequest $request, $id)
+    public function edit(Notice $notice, $id)
     {
-        $session = Session::findOrFail($id);
-        $session->name = $request->get('name');
-        $session->status = $request->get('status');
+        $data = [
+            'page_title' => 'Update Notice',
+            'page_header' => 'Update Notice',
+            'notice' => $notice->findOrFail($id)
+        ];
 
-        if ($session->save()) {
+        return view('dashboard.notice.edit')->with(array_merge($this->data, $data));
+    }
+
+    public function update(NoticeUpdateFormRequest $request, $id)
+    {
+       
+
+        $notice = Notice::findOrFail($id);
+        $notice->title = $request->get('title');
+        $notice->content = $request->get('notice_content');
+
+        if ($request->hasFile('notice_file')) {
+            if ($notice->attached_file) {
+                unlink($notice->attached_file);
+            }
+
+            $notice->attached_file = Utility::file_upload($request, 'notice_file', 'notices');
+        }
+
+        $notice->publish_date = database_formatted_date($request->get('publish_date'));
+        $notice->status = $request->get('status');
+
+        if ($notice->save()) {
             return response()->json([
                 'type' => 'success',
                 'title' => 'Updated!',
-                'message' => 'Session Updated Successfully'
+                'message' => 'Notice Update Successfully'
             ]);
         }
 
         return response()->json([
             'type' => 'error',
             'title' => 'Failed!',
-            'message' => 'Failed to Update Session'
+            'message' => 'Failed to Update Notice'
         ]);
     }
 
-    public function destroy(Session $session, $id)
+    public function destroy(Notice $notice, $id)
     {
-        $session = $session->findOrFail($id);
+        $notice = $notice->findOrFail($id);
 
-        if ($session->delete()) {
+        //file delete
+        if ($notice->attached_file) {
+            unlink($notice->attached_file);
+        }
+
+        if ($notice->delete()) {
+
             return response()->json([
                 'type' => 'success',
                 'title' => 'Success!',
-                'message' => 'Session Deleted Successfully'
+                'message' => 'Notice Deleted Successfully'
             ]);
         }
 
         return response()->json([
             'type' => 'error',
             'title' => 'Failed!',
-            'message' => 'Failed to Delete Session'
+            'message' => 'Failed to Delete Notice'
         ]);
     }
 }

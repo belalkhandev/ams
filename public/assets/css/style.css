@@ -499,3 +499,13 @@ body {
     opacity: 1;
     transition: 0.25s;
 }
+
+.notice_file_pdf {
+    width: 100%;
+    height: 700px;
+}
+
+.notice_file_image {
+    max-width: 100%;
+    height: auto;
+}

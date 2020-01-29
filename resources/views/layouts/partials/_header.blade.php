@@ -52,7 +52,7 @@
                     <div class="dropdown-menu user-dropdown" aria-labelledby="userDrowdown">
                         <div class="dropdown-body">
                             <div class="user-img">
-                                <img src="assets/images/user.png" alt="">
+                                <img src="#" alt="">
                             </div>
                             <div class="user-title text-center">
                                 <h3>{{ Auth::user()->name }}</h3>

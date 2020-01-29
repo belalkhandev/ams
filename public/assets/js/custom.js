@@ -5,7 +5,6 @@
 
         //active navigation class
         var current = location.pathname;
-        console.log(current);
         $('.navigation-menu ul li a').each(function () {
             var $this = $(this);
              if (current == '/' || current == '/admin') {

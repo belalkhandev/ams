@@ -13,7 +13,7 @@ class NoticeUpdateFormRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,8 +23,12 @@ class NoticeUpdateFormRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            //
+        $rules = [
+            'title' => 'required',
+            'publish_date' => 'required',
+            'notice_file' => 'max:10240|mimes:jpg,jpeg,png,pdf'
         ];
+
+        return $rules;
     }
 }

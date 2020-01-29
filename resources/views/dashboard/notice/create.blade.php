@@ -19,6 +19,7 @@
                     <div class="form-group">
                         <label for="">Notice Content</label>
                         <textarea name="notice_content" id="summernote" placeholder="Enter Notice Content Here" class="form-control" rows="5"></textarea>
+                        <span class="text-danger">{{ $errors->first('notice_content') }}</span>
                     </div>
 
                     <div class="row">
@@ -26,7 +27,7 @@
                             <div class="form-group">
                                 <label for="">Attached File</label>
                                 <input type="file" name="notice_file">
-                                <span class="text-danger">{{ $errors->first('file') }}</span>
+                                <span class="text-danger">{{ $errors->first('notice_file') }}</span>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -39,7 +40,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Status</label>
-                                {!! Form::select('status', getStatus(), null, ['placeholder' => 'Select Status', 'class' => 'form-control']) !!}
+                                {!! Form::select('status', getStatus(), 1, ['placeholder' => 'Select Status', 'class' => 'form-control']) !!}
                                 <span class="text-danger">{{ $errors->first('status') }}</span>
                             </div>
                         </div>
