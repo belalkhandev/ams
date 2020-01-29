@@ -127,5 +127,27 @@
                 <li><a href="#">Exam Routine list</a></li>
             </ul>
         </li>
+        <li class="nav-title">Website Manage</li>
+        <li class="treeview">
+            <a href="javascript:void(0)">
+                <i class="fas fa-envelope"></i>
+                <span>Notice Manage</span>
+                <i class="fas fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+                <li><a href="{{ route('notice.create') }}">Add Notice</a></li>
+                <li><a href="{{ route('notice.index') }}">Notice List</a></li>
+            </ul>
+        </li>
+        <li class="treeview">
+            <a href="javascript:void(0)">
+                <i class="fas fa-list"></i>
+                <span>Exam Routine</span>
+                <i class="fas fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+                <li><a href="#">Exam Category</a></li>
+                <li><a href="#">New Exam Routine</a></li>
+                <li><a href="#">Exam Routine list</a></li>
+            </ul>
+        </li>
     </ul>
 </nav>

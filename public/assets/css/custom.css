@@ -44,3 +44,47 @@
 .swal2-cancel:hover {
     background: #d8362a !important;
 }
+
+.note-toolbar.panel-heading {
+    background: #f7f7f7;
+}
+
+/* custom datpicker */
+.datepicker {
+    padding: 5px !important;
+}
+
+.today.day {
+    background: #37A000 !important;
+    color: #FFF !important;
+    border-radius: 50%;
+}
+
+.active.day {
+    background: rgb(0, 109, 160) !important;
+    color: #FFF !important;
+    border-radius: 50%;
+}
+
+.day {
+    border-radius: 50% !important;
+}
+
+.day:hover {
+    transition: 0.25s;
+}
+
+.table-condensed td,
+.table-condensed th {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.table-condensed th {
+    font-size: 14px;
+}
+
+.datepicker table th,
+.datepicker table td {
+    padding: 6px;
+}

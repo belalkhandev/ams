@@ -413,7 +413,7 @@ body {
 .has-error span {
     margin-top: 5px;
     display: block;
-    transition: 0.5s;
+    transition: 0.25s;
 }
 
 .inline-element {
