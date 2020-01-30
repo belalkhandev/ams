@@ -189,3 +189,38 @@ body {
     color: #ffffff;
     padding: 15px 0px;
 }
+
+.notice-items {
+    padding-right: 5px;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.notice-item {
+    border-left: 3px solid #d90d3d;
+    padding: 5px;
+    background: #F1F1F1;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.notice-item:last-child {
+    margin-bottom: 0px;
+}
+
+.notice-item a {
+    color: #212529;
+    text-decoration: none;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.notice-item .publish_date {
+    color: #d90d3d;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.notice-item a:hover {
+    text-decoration: underline;
+}

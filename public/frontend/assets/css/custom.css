@@ -61,6 +61,14 @@
     color: #d90d3d;
 }
 
+.slicknav_nav a a {
+    border: none;
+}
+
+.slicknav_nav a:hover {
+    border-radius: 0px;
+}
+
 @media screen and (max-width: 991px) {
     #mainMenu {
         display: none;
