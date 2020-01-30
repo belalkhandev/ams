@@ -13,7 +13,7 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Title</th>
+                                <th width="400px">Title</th>
                                 <th>Content</th>
                                 <th>Date</th>
                                 <th>File</th>
