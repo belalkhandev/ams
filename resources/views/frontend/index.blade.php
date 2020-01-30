@@ -45,10 +45,10 @@
                             </div>
                             <div class="section-content">
                                 <div class="row">
-                                    <div class="col-md-4">
-                                        <img src="" alt="">
+                                    <div class="col-md-12">
+                                        <img src="{{ asset('frontend/assets/images/sks.jpg') }}" alt="">
                                     </div>
-                                    <div class="col-md-8">
+                                    <div class="col-md-12">
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quo, et reiciendis a explicabo corrupti mollitia quam molestiae maiores nobis.</p>
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quo, et reiciendis a explicabo corrupti mollitia quam molestiae maiores nobis.</p>
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quo, et reiciendis a explicabo corrupti mollitia quam molestiae maiores nobis.</p>

@@ -105,3 +105,19 @@
     width: 100%;
     max-height: 450px;
 }
+
+.all-notice {
+    padding-right: 0px;
+    overflow: hidden;
+    height: auto;
+    max-height: none;
+}
+
+.all-notice .notice-item {
+    margin-bottom: 20px
+}
+
+.notice-item h4 {
+    font-weight: 600;
+    font-size: 15px
+}
