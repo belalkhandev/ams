@@ -98,7 +98,8 @@
 
 .owl-dot.active {
     background: #ff285b !important;
-    transition: 0.5s
+    transition: 0.5s;
+    outline: none;
 }
 
 .single-slide img {
