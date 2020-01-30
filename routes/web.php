@@ -120,6 +120,16 @@ Route::middleware(['auth'])->group(function () {
                 Route::delete('/{id}', 'NoticeController@destroy')->name('notice.destroy');
             });
 
+            //Notice  manage
+            Route::prefix('slider')->group(function () {
+                Route::get('/', 'SliderController@index')->name('slider.index');
+                Route::get('/create', 'SliderController@create')->name('slider.create');
+                Route::post('/create', 'SliderController@store')->name('slider.store');
+                Route::get('/{id}/edit', 'SliderController@edit')->name('slider.edit');
+                Route::put('/{id}/edit', 'SliderController@update')->name('slider.update');
+                Route::delete('/{id}', 'SliderController@destroy')->name('slider.destroy');
+            });
+
         });
 
         

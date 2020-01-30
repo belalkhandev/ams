@@ -509,3 +509,7 @@ body {
     max-width: 100%;
     height: auto;
 }
+
+.slide-img {
+    width: 150px;
+}
