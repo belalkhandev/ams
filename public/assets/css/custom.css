@@ -88,3 +88,8 @@
 .datepicker table td {
     padding: 6px;
 }
+
+.form-control::placeholder {
+    color: #a9a9a9 !important;
+    font-size: 12px;
+}

@@ -26,6 +26,73 @@ if (!function_exists('getStatus')) {
     }
 }
 
+if (!function_exists('getRelations')) {
+    function getRelations()
+    {
+
+        $relations = [
+            'son' => 'Son',
+            'daughter' => 'Daughter',
+            'niece' => 'Niece',
+            'nephew' => 'Nephew',
+            'brother' => 'Brother',
+            'sister' => 'Sister',
+            'grandson' => 'Grandson',
+            'Granddaughter' => 'granddaughter',
+        ];
+
+        return $relations;
+    }
+}
+
+if (!function_exists('getReligionType')) {
+    function getReligionType()
+    {
+
+        $religions = [
+            'islam' => 'Islam',
+            'christianity' => 'Christianity ',
+            'buddhism' => 'Buddhism ',
+            'hinduism ' => 'Hinduism ',
+        ];
+
+        return $religions;
+    }
+}
+
+if (!function_exists('getStudentCategory')) {
+    function getStudentCategory()
+    {
+
+        $castes = [
+            'general' => 'General',
+            'obc' => 'OBC',
+            'special' => 'Special',
+            'physical challenged' => 'Physical challenged',
+        ];
+
+        return $castes;
+    }
+}
+
+
+if (!function_exists('getBloodGroups')) {
+    function getBloodGroups()
+    {
+
+        $bloods = [
+            'a+' => 'A+ve',
+            'b+' => 'B+ve',
+            'ab+' => 'AB+ve',
+            'ab+' => 'AB-ve',
+            'o+' => 'O+ve',
+            'o-' => 'O+ve',
+        ];
+
+        return $bloods;
+    }
+}
+
 if (!function_exists('styleStatus')) {
     function styleStatus($value)
     {
