@@ -510,6 +510,7 @@ body {
     height: auto;
 }
 
+<<<<<<< HEAD
 .has-sub-label {
     display: flex;
     flex-direction: row;
@@ -560,4 +561,8 @@ body {
 
 .round-checkbox-input:checked~.round-checkbox-text {
     color: #000000;
+=======
+.slide-img {
+    width: 150px;
+>>>>>>> 334c5dbeff342ff5c4c6248ecdb64b3a8b54e3e4
 }

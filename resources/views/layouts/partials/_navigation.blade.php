@@ -140,6 +140,16 @@
         </li>
         <li class="treeview">
             <a href="javascript:void(0)">
+                <i class="fas fa-envelope"></i>
+                <span>Slider Manage</span>
+                <i class="fas fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+                <li><a href="{{ route('slider.create') }}">Add Slide</a></li>
+                <li><a href="{{ route('slider.index') }}">Slider List</a></li>
+            </ul>
+        </li>
+        <li class="treeview">
+            <a href="javascript:void(0)">
                 <i class="fas fa-list"></i>
                 <span>Exam Routine</span>
                 <i class="fas fa-angle-right"></i></a>
