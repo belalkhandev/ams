@@ -5,8 +5,8 @@
             <div class="col-md-12">
                 <div class="mainmenu">
                     <ul id="mainMenu">
-                        <li><a href="{{ route('frontend.under.construction') }}">Home</a></li>
-                        <li><a href="{{ route('frontend.under.construction') }}">About</a></li>
+                        <li><a href="{{ route('frontend.home') }}">Home</a></li>
+                        <li><a href="{{ route('frontend.about') }}">About</a></li>
                         <li><a href="{{ route('frontend.under.construction') }}">Academic</a>
                             <ul class="sub-menu">
                                 <li><a href="{{ route('frontend.under.construction') }}">Dropdown item</a></li>
@@ -28,7 +28,7 @@
                                 <li><a href="{{ route('frontend.under.construction') }}">Dropdown item</a></li>
                             </ul>
                         </li>
-                        <li><a href="{{ route('frontend.under.construction') }}">Notice</a></li>
+                        <li><a href="{{ route('frontend.notice.list') }}">Notice</a></li>
                         <li><a href="{{ route('frontend.under.construction') }}">Result</a></li>
                         <li><a href="{{ route('frontend.under.construction') }}">Requirement</a></li>
                         <li><a href="{{ route('frontend.under.construction') }}">Gallery</a></li>

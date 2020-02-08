@@ -24,9 +24,9 @@
 
             <!-- main-content-area -->
             <div class="main-content">
-                <div class="content-page-title">
+                {{-- <div class="content-page-title">
                     <h3>@yield('page_header', $page_header)</h3>
-                </div>
+                </div> --}}
                 <div class="content">
                     {{-- all content goes to here --}}
                     @yield('content')

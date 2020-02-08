@@ -4,7 +4,14 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="footer">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa tempore eos nesciunt?</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Copyright &copy; - {{ Carbon\Carbon::now()->year }}, All Rights Reserved School </p>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <p>Developed By <a target="_blank" href="http://devbelal.com">Md. Bellal Hossain</a></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

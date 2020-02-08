@@ -61,6 +61,14 @@
     color: #d90d3d;
 }
 
+.slicknav_nav a a {
+    border: none;
+}
+
+.slicknav_nav a:hover {
+    border-radius: 0px;
+}
+
 @media screen and (max-width: 991px) {
     #mainMenu {
         display: none;
@@ -90,10 +98,27 @@
 
 .owl-dot.active {
     background: #ff285b !important;
-    transition: 0.5s
+    transition: 0.5s;
+    outline: none;
 }
 
 .single-slide img {
     width: 100%;
     max-height: 450px;
+}
+
+.all-notice {
+    padding-right: 0px;
+    overflow: hidden;
+    height: auto;
+    max-height: none;
+}
+
+.all-notice .notice-item {
+    margin-bottom: 20px
+}
+
+.notice-item h4 {
+    font-weight: 600;
+    font-size: 15px
 }

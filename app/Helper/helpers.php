@@ -26,6 +26,73 @@ if (!function_exists('getStatus')) {
     }
 }
 
+if (!function_exists('getRelations')) {
+    function getRelations()
+    {
+
+        $relations = [
+            'son' => 'Son',
+            'daughter' => 'Daughter',
+            'niece' => 'Niece',
+            'nephew' => 'Nephew',
+            'brother' => 'Brother',
+            'sister' => 'Sister',
+            'grandson' => 'Grandson',
+            'Granddaughter' => 'granddaughter',
+        ];
+
+        return $relations;
+    }
+}
+
+if (!function_exists('getReligionType')) {
+    function getReligionType()
+    {
+
+        $religions = [
+            'islam' => 'Islam',
+            'christianity' => 'Christianity ',
+            'buddhism' => 'Buddhism ',
+            'hinduism ' => 'Hinduism ',
+        ];
+
+        return $religions;
+    }
+}
+
+if (!function_exists('getStudentCategory')) {
+    function getStudentCategory()
+    {
+
+        $castes = [
+            'general' => 'General',
+            'obc' => 'OBC',
+            'special' => 'Special',
+            'physical challenged' => 'Physical challenged',
+        ];
+
+        return $castes;
+    }
+}
+
+
+if (!function_exists('getBloodGroups')) {
+    function getBloodGroups()
+    {
+
+        $bloods = [
+            'a+' => 'A+ve',
+            'b+' => 'B+ve',
+            'ab+' => 'AB+ve',
+            'ab+' => 'AB-ve',
+            'o+' => 'O+ve',
+            'o-' => 'O+ve',
+        ];
+
+        return $bloods;
+    }
+}
+
 if (!function_exists('styleStatus')) {
     function styleStatus($value)
     {
@@ -53,5 +120,32 @@ if (!function_exists('makeDropdownList')) {
         }
 
         return $dropdown_lists;
+    }
+}
+
+if (!function_exists('database_formatted_date')) {
+    function database_formatted_date($value = null) {
+        
+        $date = date('Y-m-d', strtotime($value));
+
+        return $date;
+    }
+}
+
+if (!function_exists('user_formatted_date')) {
+    function user_formatted_date($value = null) {
+        
+        $date = date('d-M, Y', strtotime($value));
+
+        return $date;
+    }
+}
+
+if (!function_exists('datepicker_formatted_date')) {
+    function datepicker_formatted_date($value = null) {
+        
+        $date = date('d-m-Y', strtotime($value));
+
+        return $date;
     }
 }

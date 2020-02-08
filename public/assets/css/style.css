@@ -413,7 +413,7 @@ body {
 .has-error span {
     margin-top: 5px;
     display: block;
-    transition: 0.5s;
+    transition: 0.25s;
 }
 
 .inline-element {
@@ -486,16 +486,83 @@ body {
     left: 2px;
     width: 10px;
     height: 10px;
-    background: #007bff;
+    background: #4CAF50;
     border-radius: 1px;
     opacity: 0;
 }
 
 .input-radio-box:checked~.radio-box-wrap {
-    border: 1px solid #007bff;
+    border: 1px solid #4CAF50;
 }
 
 .input-radio-box:checked~.radio-box-wrap::after {
     opacity: 1;
     transition: 0.25s;
+}
+
+.notice_file_pdf {
+    width: 100%;
+    height: 700px;
+}
+
+.notice_file_image {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.has-sub-label {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.sub-label {
+    width: 100%;
+}
+
+.round-checkbox-container {
+    position: relative;
+    padding-left: 20px;
+    margin: 0px;
+}
+
+.round-checkbox-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.round-checkbox-text {
+    color: #525252;
+    font-weight: normal;
+    cursor: pointer
+}
+
+.round-checkbox-text::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background: #9c9c9c;
+    content: '';
+    opacity: 1;
+    border-radius: 50%;
+    transform: scale(0.8);
+    transition: 0.25s;
+}
+
+.round-checkbox-input:checked~.round-checkbox-text::after {
+    background: #4CAF50;
+    transform: scale(1);
+}
+
+.round-checkbox-input:checked~.round-checkbox-text {
+    color: #000000;
+}
+
+.slide-img {
+    width: 150px;
 }

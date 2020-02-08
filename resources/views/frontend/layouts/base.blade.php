@@ -10,6 +10,9 @@
     <!-- plugins -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/vendors/owl-carousel/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/vendors/slicknav/slicknav.min.css') }}">
+
+    @stack('header-styles')
+
     <!--  styles  -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}">   
     <!--  custom styles  -->
@@ -31,5 +34,10 @@
     <script src="{{ asset('frontend/assets/vendors/slicknav/jquery.slicknav.min.js') }}"></script>
     <!--  jquery plugin active script  -->
     <script src="{{ asset('frontend/assets/js/active.js') }}"></script>
+    
+    @stack('footer-styles')
+
+    @stack('footer-scripts')
+    
 </body>
 </html>
