@@ -16,6 +16,7 @@ class CreateStudentsTable extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('guardian_id');
             $table->string('student_id');
             $table->string('first_name');
             $table->string('last_name')->nullable();
@@ -43,6 +44,7 @@ class CreateStudentsTable extends Migration
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('guardian_id')->references('id')->on('guardians')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

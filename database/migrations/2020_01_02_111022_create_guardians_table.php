@@ -15,7 +15,6 @@ class CreateGuardiansTable extends Migration
     {
         Schema::create('guardians', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('student_id');
             $table->string('name');
             $table->string('phone');
             $table->string('email')->nullable();
@@ -24,8 +23,6 @@ class CreateGuardiansTable extends Migration
             $table->string('address')->nullable();
             $table->string('designation')->nullable();
             $table->timestamps();
-
-            $table->foreign('student_id')->references('id')->on('students')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
