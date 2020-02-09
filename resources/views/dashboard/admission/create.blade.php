@@ -33,7 +33,7 @@
                                         </label>
                                     </div>
                                 </label>
-                                <input type="text" name="student_id" class="form-control"  id="studentID" placeholder="Enter student id" disabled>                                
+                                <input type="text" name="student_id" class="form-control"  id="studentID" placeholder="Enter student id" readonly>                                
                                 <span class="text-danger">{{ $errors->first('student_id') }}</span>
                             </div>
                         </div>
@@ -50,7 +50,7 @@
                                         </label>
                                     </div>
                                 </label>
-                                <input type="text" name="roll_number" class="form-control" id="studentRoll" placeholder="Enter roll number" disabled>                                
+                                <input type="text" name="roll_number" class="form-control" id="studentRoll" placeholder="Enter roll number" readonly>                                
                                 <span class="text-danger">{{ $errors->first('roll_number') }}</span>
                             </div>
                         </div>
@@ -87,8 +87,8 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="">Section</label>
-                                {!! Form::select('group', makeDropdownList($sections), null, ['placeholder' => 'Select Group', 'class' => 'form-control']) !!}
-                                <span class="text-danger">{{ $errors->first('group') }}</span>
+                                {!! Form::select('section', makeDropdownList($sections), null, ['placeholder' => 'Select section', 'class' => 'form-control']) !!}
+                                <span class="text-danger">{{ $errors->first('section') }}</span>
                             </div>
                         </div>
                     </div>
@@ -422,17 +422,17 @@
 
             $(document).on('change', '#student_roll_checked', function() {
                 if (this.checked === true) {
-                    $('#studentRoll').closest('.form-control').attr('disabled', false);
+                    $('#studentRoll').closest('.form-control').attr('readonly', false);
                 } else {
-                    $('#studentRoll').closest('.form-control').attr('disabled', true).val('');
+                    $('#studentRoll').closest('.form-control').attr('readonly', true).val('');
                 }
             });
 
             $(document).on('change', '#student_id_checked', function() {
                 if (this.checked === true) {
-                    $('#studentID').closest('.form-control').attr('disabled', false);
+                    $('#studentID').closest('.form-control').attr('readonly', false);
                 } else {
-                    $('#studentID').closest('.form-control').attr('disabled', true).val('');
+                    $('#studentID').closest('.form-control').attr('readonly', true).val('');
                 }
             });
 
@@ -453,9 +453,9 @@
                     let father_name = $('#father_name').val();
                     let father_phone = $('#father_phone').val();
                     let father_occupation = $('#father_occupation').val();                    
-                    $('#guardian_name').val(father_name).prop('disabled', true);
-                    $('#guardian_phone').val(father_phone).prop('disabled', true);
-                    $('#guardian_occupation').val(father_occupation).prop('disabled', true);
+                    $('#guardian_name').val(father_name).prop('readonly', true);
+                    $('#guardian_phone').val(father_phone).prop('readonly', true);
+                    $('#guardian_occupation').val(father_occupation).prop('readonly', true);
                 }              
 
             });
@@ -468,9 +468,9 @@
                     let mother_name = $('#mother_name').val();
                     let mother_phone = $('#mother_phone').val();
                     let mother_occupation = $('#mother_occupation').val();                    
-                    $('#guardian_name').val(mother_name).prop('disabled', true);
-                    $('#guardian_phone').val(mother_phone).prop('disabled', true);
-                    $('#guardian_occupation').val(mother_occupation).prop('disabled', true);
+                    $('#guardian_name').val(mother_name).prop('readonly', true);
+                    $('#guardian_phone').val(mother_phone).prop('readonly', true);
+                    $('#guardian_occupation').val(mother_occupation).prop('readonly', true);
                 }
 
             });
@@ -485,9 +485,9 @@
 
                     $('#existing-guardian').hide();
                     $('#new-guardian').show();
-                    $('#guardian_name').val(father_name).prop('disabled', true);
-                    $('#guardian_phone').val(father_phone).prop('disabled', true);
-                    $('#guardian_occupation').val(father_occupation).prop('disabled', true);
+                    $('#guardian_name').val(father_name).prop('readonly', true);
+                    $('#guardian_phone').val(father_phone).prop('readonly', true);
+                    $('#guardian_occupation').val(father_occupation).prop('readonly', true);
                     
                 } else if ('mother' == _self.val()) {
                     let mother_name = $('#mother_name').val();
@@ -495,17 +495,17 @@
                     let mother_occupation = $('#mother_occupation').val();
                     $('#existing-guardian').hide();
                     $('#new-guardian').show();
-                    $('#guardian_name').val(mother_name).prop('disabled', true);
-                    $('#guardian_phone').val(mother_phone).prop('disabled', true);
-                    $('#guardian_occupation').val(mother_occupation).prop('disabled', true);
+                    $('#guardian_name').val(mother_name).prop('readonly', true);
+                    $('#guardian_phone').val(mother_phone).prop('readonly', true);
+                    $('#guardian_occupation').val(mother_occupation).prop('readonly', true);
 
                                         
                 } else if ('other' == _self.val()) {
                     $('#existing-guardian').hide();
                     $('#new-guardian').show();
-                    $('#guardian_name').val('').prop('disabled', false);
-                    $('#guardian_phone').val('').prop('disabled', false);
-                    $('#guardian_occupation').val('').prop('disabled', false);
+                    $('#guardian_name').val('').prop('readonly', false);
+                    $('#guardian_phone').val('').prop('readonly', false);
+                    $('#guardian_occupation').val('').prop('readonly', false);
                     
                 } else if ('exists' == _self.val()) {
                     $('#existing-guardian').show();

@@ -27,13 +27,15 @@
                             @foreach ($admissions as $key => $admission)
                                 <tr>
                                     <td>{{ $key+1 }}</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td>{{ $admission->student->student_id }}</td>
+                                    <td>{{ $admission->student->name }}</td>
+                                    <td>{{ $admission->academicClass->name }}</td>
+                                    <td>{{ ($admission->group ? $admission->group->name : '') }}</td>
+                                    <td>{{ ($admission->section ? $admission->section->name : '') }}</td>
+                                    <td>{{ $admission->session->name }}</td>
+                                    <td class="inline-element">
+                                        <a href="{{ route('notice.show', $admission->student->id) }}" target="_blank" data-toggle="tooltip" title="View Details" data-placement="top" class="custom-btn-sm btn btn-success"><i class="fas fa-eye"></i></a>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>

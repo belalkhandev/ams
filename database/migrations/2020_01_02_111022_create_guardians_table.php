@@ -21,7 +21,7 @@ class CreateGuardiansTable extends Migration
             $table->string('relation');
             $table->string('occupation')->nullable();
             $table->string('address')->nullable();
-            $table->string('designation')->nullable();
+            $table->string('guardian_type')->nullable();
             $table->timestamps();
         });
     }

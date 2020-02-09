@@ -104,9 +104,9 @@ Route::middleware(['auth'])->group(function () {
                 Route::get('/', 'AdmissionController@index')->name('admission.index');
                 Route::get('/create', 'AdmissionController@create')->name('admission.create');
                 Route::post('/create', 'AdmissionController@store')->name('admission.store');
-                Route::get('/{id}/edit', 'AdmissionController@edit')->name('admission.edit');
-                Route::put('/{id}/edit', 'AdmissionController@update')->name('admission.update');
-                Route::delete('/{id}', 'AdmissionController@destroy')->name('admission.destroy');
+                // Route::get('/{id}/edit', 'AdmissionController@edit')->name('admission.edit');
+                // Route::put('/{id}/edit', 'AdmissionController@update')->name('admission.update');
+                // Route::delete('/{id}', 'AdmissionController@destroy')->name('admission.destroy');
             });
 
             //Notice  manage

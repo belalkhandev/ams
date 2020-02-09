@@ -18,6 +18,7 @@ class CreateStudentsTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('guardian_id');
             $table->string('student_id');
+            $table->string('id_type')->default('system-define')->comment('system-define, user-define');
             $table->string('first_name');
             $table->string('last_name')->nullable();
             $table->string('father_name');
