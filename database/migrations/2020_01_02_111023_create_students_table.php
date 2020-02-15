@@ -16,7 +16,6 @@ class CreateStudentsTable extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('guardian_id');
             $table->string('student_id');
             $table->string('id_type')->default('system-define')->comment('system-define, user-define');
             $table->string('first_name');
@@ -41,6 +40,8 @@ class CreateStudentsTable extends Migration
             $table->string('photo')->nullable();
             $table->string('father_photo')->nullable();
             $table->string('mother_photo')->nullable();
+            $table->unsignedBigInteger('guardian_id');
+            $table->string('relation', 50)->comment('relation with guardian');
             $table->integer('status')->default(1)->comment('1=active, 0=inactive');
             $table->timestamps();
 

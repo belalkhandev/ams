@@ -117,7 +117,7 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="">Gender</label>
-                                {!! Form::select('gender', getGenderType(), null, ['placeholder' => 'Select Gender', 'class' => 'form-control']) !!}
+                                {!! Form::select('gender', getGenderType(), null, ['placeholder' => 'Select Gender', 'class' => 'form-control', 'id' => 'student_gender']) !!}
                                 <span class="text-danger">{{ $errors->first('gender') }}</span>
                             </div>
                         </div>
@@ -478,6 +478,8 @@
             //on select gurdian type change the value of guardian informatin
             $(document).on('change', '.input-radio-box', function () {
                 let _self = $(this);
+                $('#guardian_relation').val('');
+
                 if ('father' == _self.val()) {
                     let father_name = $('#father_name').val();
                     let father_phone = $('#father_phone').val();
@@ -488,6 +490,12 @@
                     $('#guardian_name').val(father_name).prop('readonly', true);
                     $('#guardian_phone').val(father_phone).prop('readonly', true);
                     $('#guardian_occupation').val(father_occupation).prop('readonly', true);
+
+                    if ($('#student_gender').val() == 'male') {
+                        $('#guardian_relation').val('son');
+                    } else if ($('#student_gender').val() == 'female') {
+                        $('#guardian_relation').val('daughter');
+                    }
                     
                 } else if ('mother' == _self.val()) {
                     let mother_name = $('#mother_name').val();
@@ -499,6 +507,11 @@
                     $('#guardian_phone').val(mother_phone).prop('readonly', true);
                     $('#guardian_occupation').val(mother_occupation).prop('readonly', true);
 
+                    if ($('#student_gender').val() == 'male') {
+                        $('#guardian_relation').val('son');
+                    } else if ($('#student_gender').val() == 'female') {
+                        $('#guardian_relation').val('daughter');
+                    }
                                         
                 } else if ('other' == _self.val()) {
                     $('#existing-guardian').hide();
@@ -516,6 +529,21 @@
                     $('#guardian_phone').val('');
                     $('#guardian_occupation').val(''); 
                 }
+            });
+
+            $(document).on('change', '#student_gender', function () {
+                var guardian_type = $('.input-radio-box:checked').val();
+                var gender = $(this).val();
+                $('#guardian_relation').val('');
+                
+                if ('father' == guardian_type || 'mother' == guardian_type) {
+                    if (gender == 'male') {
+                        $('#guardian_relation').val('son');
+                    } else if (gender == 'female') {
+                        $('#guardian_relation').val('daughter');
+                    }
+                }
+
             });
 
 

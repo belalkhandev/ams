@@ -15,13 +15,13 @@ class CreateGuardiansTable extends Migration
     {
         Schema::create('guardians', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('guardian_type')->nullable();
             $table->string('name');
             $table->string('phone');
             $table->string('email')->nullable();
-            $table->string('relation');
             $table->string('occupation')->nullable();
             $table->string('address')->nullable();
-            $table->string('guardian_type')->nullable();
+            $table->string('photo')->nullable();
             $table->timestamps();
         });
     }

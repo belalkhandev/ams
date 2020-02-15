@@ -59,13 +59,12 @@ class AdmissionController extends Controller
                 $guardian->name = $request->get('guardian_name');
                 $guardian->phone = $request->get('guardian_phone');
                 $guardian->email = $request->get('guardian_email');
-                $guardian->relation = $request->get('guardian_relation');
                 $guardian->occupation = $request->get('guardian_occupation');
                 $guardian->address = $request->get('guardian_address');
                 $guardian->guardian_type = $request->get('guardian_type');
 
                 if ($request->hasFile('guardian_photo')) {
-                    $guardian->guardian_photo = Utility::file_upload($request, 'guardian_photo', 'guardians');
+                    $guardian->photo = Utility::file_upload($request, 'guardian_photo', 'guardians');
                 }
 
                 $guardian->save();
@@ -125,7 +124,6 @@ class AdmissionController extends Controller
             //store student 
             $student = new Student();
             $student->user_id = $user->id;
-            $student->guardian_id = $guardian_id;
             $student->student_id = $student_id;
             $student->first_name = $request->get('firstname');
             $student->last_name = $request->get('lastname');
@@ -158,6 +156,9 @@ class AdmissionController extends Controller
             if ($request->hasFile('mother_photo')) {
                 $student->mother_photo = Utility::file_upload($request, 'mother_photo', 'mothers');
             }
+
+            $student->guardian_id = $guardian_id;
+            $student->relation = $request->get('guardian_relation');
 
             $student->save();
 

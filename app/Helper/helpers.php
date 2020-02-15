@@ -4,7 +4,6 @@ if (!function_exists('getGenderType')) {
     {
 
         $genders = [
-            '' => 'Select',
             'male' => 'Male',
             'female' => 'Female',
         ];
