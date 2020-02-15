@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Models\Admission;
 use App\Models\Group;
 use App\Models\Guardian;
+use App\Models\Role;
 use App\Models\Section;
 use App\Models\Session;
 use App\Models\Student;
@@ -119,7 +120,7 @@ class AdmissionController extends Controller
             $user->created_by = Auth::user()->id;
             $user->save();
             //attach student roll
-            $user->attachRole('student');
+            $user->attachRole(Role::where('name', 'student')->first());
 
             //store student 
             $student = new Student();
@@ -173,6 +174,11 @@ class AdmissionController extends Controller
             //store student academic information
             $student_academic = new StudentAcademic();
             $student_academic->student_id = $admission->student_id;
+            
+            if ($request->get('student_roll_checked')) {
+                $student_academic->roll_no = $request->student_roll;
+            }
+
             $student_academic->academic_class_id = $request->get('class');
             $student_academic->group_id = $request->get('group');
             $student_academic->section_id = $request->get('section');
@@ -188,6 +194,8 @@ class AdmissionController extends Controller
             ]);
 
         } catch (Exception $e) {
+
+            dd($e->getMessage() );
             DB::rollBack();
 
             return response()->json([

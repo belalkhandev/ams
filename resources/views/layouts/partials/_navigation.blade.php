@@ -3,7 +3,7 @@
         <li><a href="{{ route('dashboard') }}" class="index-link"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
         <li class="treeview">
             <a href="javascript:void(0)">
-                <i class="fas fa-list"></i>
+                <i class="fab fa-accusoft"></i>
                 <span>Admission Management</span>
                 <i class="fas fa-angle-right"></i></a>
             <ul class="treeview-menu">
@@ -13,7 +13,7 @@
         </li>
         <li class="treeview">
             <a href="javascript:void(0)">
-                <i class="fas fa-list"></i>
+                <i class="fab fa-app-store-ios"></i>
                 <span>Attendance</span>
                 <i class="fas fa-angle-right"></i></a>
             <ul class="treeview-menu">
@@ -24,7 +24,7 @@
         <li class="nav-title">Academic manage</li>
         <li class="treeview">
             <a href="javascript:void(0)">
-                <i class="fas fa-list"></i>
+                <i class="fas fa-database"></i>
                 <span>Sessions</span>
                 <i class="fas fa-angle-right"></i></a>
             <ul class="treeview-menu">
@@ -34,7 +34,7 @@
         </li>
         <li class="treeview">
             <a href="javascript:void(0)">
-                <i class="fas fa-list"></i>
+                <i class="fas fa-delicious"></i>
                 <span>Class</span>
                 <i class="fas fa-angle-right"></i></a>
             <ul class="treeview-menu">
@@ -44,7 +44,7 @@
         </li>
         <li class="treeview">
             <a href="javascript:void(0)">
-                <i class="fas fa-list"></i>
+                <i class="fas fa-object-group"></i>
                 <span>Group</span>
                 <i class="fas fa-angle-right"></i></a>
             <ul class="treeview-menu">
@@ -54,7 +54,7 @@
         </li>
         <li class="treeview">
             <a href="javascript:void(0)">
-                <i class="fas fa-list"></i>
+                <i class="fas fa-puzzle-piece"></i>
                 <span>Section</span>
                 <i class="fas fa-angle-right"></i></a>
             <ul class="treeview-menu">
@@ -65,7 +65,7 @@
         </li>
         <li class="treeview">
             <a href="javascript:void(0)">
-                <i class="fas fa-list"></i>
+                <i class="fab fa-delicious"></i>
                 <span>Subject</span>
                 <i class="fas fa-angle-right"></i></a>
             <ul class="treeview-menu">
@@ -75,7 +75,7 @@
         </li>
         <li class="treeview">
             <a href="javascript:void(0)">
-                <i class="fas fa-list"></i>
+                <i class="fas fa-cog"></i>
                 <span>Syllabus</span>
                 <i class="fas fa-angle-right"></i></a>
             <ul class="treeview-menu">

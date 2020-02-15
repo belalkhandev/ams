@@ -42,7 +42,6 @@ body {
     width: 250px;
     background-color: #242939;
     position: relative;
-    transition: width 1s ease-in;
 }
 
 .logo {
@@ -184,8 +183,12 @@ body {
 
 .hide-sidebar {
     overflow: hidden;
-    max-width: 0;
-    transition: max-width 5s ease-out;
+    width: 0;
+    transition: width 0.25s ease-in-out;
+}
+
+.hide-sidebar * {
+    opacity: 0;
 }
 
 .hide-sidebar~.main-content-area {
