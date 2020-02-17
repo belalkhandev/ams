@@ -15,4 +15,9 @@ class Student extends Model
         return $name;
     }
 
+    public function studentAcademic()
+    {
+        return $this->hasMany('App\Models\StudentAcademic', 'student_id')->latest();
+    }
+
 }

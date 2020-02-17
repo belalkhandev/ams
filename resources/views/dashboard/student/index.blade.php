@@ -22,12 +22,13 @@
                 </thead>
                 @if($students->isNotEmpty())
                 <tbody>
+                    @for($i=1;$i<200;$i++)
                     @foreach ($students as $key => $student)
                         <tr>
                             <td>{{ $student->student_id }}</td>
                             <td>{{ $student->name }}</td>
                             <td>{{ $student->father_name }}</td>
-                            <td>{{ $student->student_id }}</td>
+                            <td>{{ $student->studentAcademic->first()->academicClass->name }}</td>
                             <td>{{ $student->gender }}</td>
                             <td>{{ $student->category }}</td>
                             <td>{{ $student->phone }}</td>
@@ -42,6 +43,7 @@
                             </td>
                         </tr>
                     @endforeach
+                    @endfor
                 </tbody>
                 @endif
             </table>
@@ -72,7 +74,7 @@
                         $('#studentDatatable').DataTable({
                             dom: 'Bfrtip',
                             language: {
-                                searchPlaceholder: "Search Students",                                
+                                searchPlaceholder: "student id, name, phone",                                
                             },
                             lengthMenu: [
                                 [10, 25, 50, -1 ],

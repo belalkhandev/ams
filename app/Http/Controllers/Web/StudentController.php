@@ -18,4 +18,15 @@ class StudentController extends Controller
 
         return view('dashboard.student.index')->with(array_merge($this->data, $data));
     }
+
+    public function show(Student $student, $id)
+    {
+        $data = [
+            'page_title' => 'Student Details',
+            'page_header' => 'Students Details',
+            'student' => $student->findOrFail($id),
+        ];
+
+        return view('dashboard.student.show')->with(array_merge($this->data, $data));
+    }
 }

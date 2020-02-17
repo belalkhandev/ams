@@ -212,3 +212,8 @@ table.dataTable.no-footer {
     background: #444444;
     color: #FFF;
 }
+
+.dt-button.button-page-length:hover, 
+.dt-button.button-page-length.active {
+    color: #673ab7;
+}

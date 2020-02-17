@@ -569,3 +569,117 @@ body {
 .slide-img {
     width: 150px;
 }
+
+.tab-box {
+    background: #FFFFFF;
+}
+
+.tab-box-header {
+    padding: 20px 30px;
+}
+
+.tabl-box-header-title {
+    font-size: 20px;
+    color: #000;
+}
+
+.tab-box-body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    background: #FFF;
+}
+
+.tab-box-navigation {
+    width: 200px;
+    background: #FFF;
+    border-right: 1px solid #DDD;
+}
+
+.tab-box-content {
+    width: calc(100% - 200px);
+    background: #ffffff;
+    padding: 5px 25px;
+}
+
+.tab-box-navigation .nav-tabs {
+    list-style: none;
+    border: 0px solid  #000;
+}
+
+.tab-box-navigation .nav-tabs li {
+    display: block;
+    width: 100%;
+    margin: 0px;
+}
+
+.tab-box-footer {
+    padding: 20px;
+}
+
+.tab-box-navigation .nav-tabs .nav-link {
+    border: 0px;
+}
+
+.tab-content-header {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #000;
+}
+
+.table-content-body {
+        line-height: 1.6;
+        margin-bottom: 15px;
+        color: #3a3a3a;
+}
+
+.tab-box-navigation .nav-tabs .nav-link {
+    position: relative;
+    border-radius: 0px;
+    color: #545454;
+    padding: 15px 10px;
+    text-transform: capitalize
+}
+
+.tab-box-navigation .nav-tabs .nav-link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -2px;
+    width: 3px;
+    background: #4CAF50;
+    height: 100%;
+    visibility: hidden;
+}
+.tab-box-navigation .nav-tabs .nav-link:hover {
+    background: #f3f3f3;
+    color: #4CAF50;
+    transition: 0.25s;
+}
+
+.tab-box-navigation .nav-tabs .nav-link.active {
+    background: #f3f3f3;
+    color: #4CAF50;
+}
+
+.tab-box-navigation .nav-tabs .nav-link.active::after {
+    visibility: visible;
+}
+
+.tab-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tab-table tr td, .tab-table tr th {
+    padding: 5px 10px;
+}
+
+.tab-table tr td, .tab-table tr th {
+    border-bottom: 1px solid #DDD;
+}
+/* 
+.tab-table tr:nth-child(2n) {
+    background: #dddddd;
+} */

@@ -60,7 +60,7 @@
         </li>
         <li class="treeview">
             <a href="javascript:void(0)">
-                <i class="fas fa-delicious"></i>
+                <i class="fab fa-delicious"></i>
                 <span>Class</span>
                 <i class="fas fa-angle-right"></i></a>
             <ul class="treeview-menu">
