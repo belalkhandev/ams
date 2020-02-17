@@ -679,7 +679,24 @@ body {
 .tab-table tr td, .tab-table tr th {
     border-bottom: 1px solid #DDD;
 }
+
+.tab-table tr:last-child td, .tab-table tr:last-child th {
+    border-bottom: 0px solid #ddd;
+}
+
+.tab-table tr:first-child td:last-child{
+    border-bottom: 0px solid #ddd;
+}
 /* 
 .tab-table tr:nth-child(2n) {
     background: #dddddd;
 } */
+
+.student-photo img {
+    width: 95%;
+    height: auto;
+}
+
+.father_image, .mother_image,.guardian_photo{
+    width: 100px;
+}

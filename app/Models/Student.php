@@ -20,4 +20,9 @@ class Student extends Model
         return $this->hasMany('App\Models\StudentAcademic', 'student_id')->latest();
     }
 
+    public function guardian()
+    {
+        return $this->belongsTo('App\Models\Guardian', 'guardian_id');
+    }
+
 }
