@@ -377,7 +377,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Select from existing guardian</label>
-                                    {!! Form::select('exists_guardian', makeDropdownList($sessions), null, ['placeholder' => 'Select Guardian', 'class' => 'form-control']) !!}
+                                    {!! Form::select('exists_guardian', makeDropdownList($guardians, 'id', 'name_phone'), null, ['placeholder' => 'Select Guardian', 'class' => 'form-control has-select2 w-100']) !!}
                                     <span class="text-danger">{{ $errors->first('exists_guardian') }}</span>
                                 </div>
                             </div>
@@ -418,6 +418,10 @@
                     todayHighlight: true,
                     format: 'dd-mm-yyyy'
                 });
+            }
+
+            if ($('.has-select2').length > 0) {
+                $('.has-select2').select2();
             }
 
             $(document).on('change', '#student_roll_checked', function() {

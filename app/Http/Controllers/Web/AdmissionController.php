@@ -43,6 +43,7 @@ class AdmissionController extends Controller
             'classes' => AcademicClass::get(),
             'groups' => Group::get(),
             'sections' => Section::get(),
+            'guardians' => Guardian::orderBy('name', 'ASC')->get(),
         ];
     
         return view('dashboard.admission.create')->with(array_merge($this->data, $data));

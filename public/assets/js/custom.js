@@ -7,7 +7,7 @@
         var current = location.pathname;
         $('.navigation-menu ul li a').each(function () {
             var $this = $(this);
-             if (current == '/' || current == '/admin') {
+             if (current == '/' || current == '/admin' || current == '/admin/') {
                  $('.index-link').closest('li').addClass('active');
                  return false;
              }else if ($this.attr('href').indexOf(current) !== -1) {

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/plugins/sweetalert2/sweetalert2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/plugins/select2/select2.min.css') }}">
     @stack('header-styles')
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">    
     <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
@@ -27,6 +28,7 @@
     <script src="{{ asset('assets/js/popper.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/select2/select2.min.js') }}"></script>
     <script src="{{ asset('assets/js/submitter.js') }}"></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
     @stack('footer-styles')
