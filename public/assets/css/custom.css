@@ -113,6 +113,10 @@
     color: #FFF !important;
 }
 
+.dataTables_wrapper .dataTables_paginate {
+    padding-top: 10px !important;
+}
+
 .dataTables_filter input {
     border: 1px solid #b3b3b3;
     padding: 5px;
@@ -120,7 +124,7 @@
 
 .paginate_button {
     background: #cacaca !important;
-    padding: 2px 5px !important;
+    padding: 5px 10px !important;
     border: 0px solid #DDD !important;
 }
 

@@ -196,8 +196,6 @@ class AdmissionController extends Controller
             ]);
 
         } catch (Exception $e) {
-
-            dd($e->getMessage() );
             DB::rollBack();
 
             return response()->json([
