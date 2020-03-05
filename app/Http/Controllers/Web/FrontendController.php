@@ -45,7 +45,7 @@ class FrontendController extends Controller
             'all_notices' => Notice::orderBy('publish_date', 'desc')
                 ->orderBy('id', 'desc')
                 ->whereDate('publish_date', '<=', Carbon::now())
-                ->paginate(20)
+                ->paginate(5)
         ];
 
         return view('frontend.notice.index')->with(array_merge($this->data, $data));

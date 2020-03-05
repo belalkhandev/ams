@@ -4,7 +4,6 @@ if (!function_exists('getGenderType')) {
     {
 
         $genders = [
-            '' => 'Select',
             'male' => 'Male',
             'female' => 'Female',
         ];
@@ -81,12 +80,12 @@ if (!function_exists('getBloodGroups')) {
     {
 
         $bloods = [
+            'o+' => 'O+ve',
+            'o-' => 'O+ve',
             'a+' => 'A+ve',
             'b+' => 'B+ve',
             'ab+' => 'AB+ve',
-            'ab+' => 'AB-ve',
-            'o+' => 'O+ve',
-            'o-' => 'O+ve',
+            'ab-' => 'AB-ve',
         ];
 
         return $bloods;

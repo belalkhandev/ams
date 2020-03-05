@@ -7,6 +7,7 @@ use App\Http\Requests\SessionStoreFormRequest;
 use App\Http\Requests\SessionUpdateFormRequest;
 use App\Models\Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 Class SessionController extends Controller
 {
@@ -86,6 +87,10 @@ Class SessionController extends Controller
 
     public function destroy(Session $session, $id)
     {
+        if (!Auth::user()->canDo(['manage_admin'])) {
+            abort(401, 'Unauthorized Access.');
+        }
+
         $session = $session->findOrFail($id);
 
         if ($session->delete()) {

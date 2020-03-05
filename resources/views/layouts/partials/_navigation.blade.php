@@ -3,7 +3,7 @@
         <li><a href="{{ route('dashboard') }}" class="index-link"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
         <li class="treeview">
             <a href="javascript:void(0)">
-                <i class="fas fa-list"></i>
+                <i class="fab fa-accusoft"></i>
                 <span>Admission Management</span>
                 <i class="fas fa-angle-right"></i></a>
             <ul class="treeview-menu">
@@ -13,7 +13,7 @@
         </li>
         <li class="treeview">
             <a href="javascript:void(0)">
-                <i class="fas fa-list"></i>
+                <i class="fab fa-app-store-ios"></i>
                 <span>Attendance</span>
                 <i class="fas fa-angle-right"></i></a>
             <ul class="treeview-menu">
@@ -21,10 +21,36 @@
                 <li><a href="#">Attendance Processing</a></li>
             </ul>
         </li>
+
+        <li class="nav-title">People Management</li>
+        <li class="treeview">
+            <a href="javascript:void(0)">
+                <i class="fas fa-users"></i>
+                <span>Student Information</span>
+                <i class="fas fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+                <li><a href="{{ route('student.index') }}">Student List</a></li>
+                <li><a href="#">Student History</a></li>
+                <li><a href="#">Guardian List</a></li>
+                <li><a href="#">Inactive Student</a></li>
+            </ul>
+        </li>
+        <li class="treeview">
+            <a href="javascript:void(0)">
+                <i class="fas fa-user"></i>
+                <span>Teacher Information</span>
+                <i class="fas fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+                <li><a href="#">New Teacher</a></li>
+                <li><a href="#">Teacher List</a></li>
+                <li><a href="#">Teacher History</a></li>
+            </ul>
+        </li>
+
         <li class="nav-title">Academic manage</li>
         <li class="treeview">
             <a href="javascript:void(0)">
-                <i class="fas fa-list"></i>
+                <i class="fas fa-database"></i>
                 <span>Sessions</span>
                 <i class="fas fa-angle-right"></i></a>
             <ul class="treeview-menu">
@@ -34,7 +60,7 @@
         </li>
         <li class="treeview">
             <a href="javascript:void(0)">
-                <i class="fas fa-list"></i>
+                <i class="fab fa-delicious"></i>
                 <span>Class</span>
                 <i class="fas fa-angle-right"></i></a>
             <ul class="treeview-menu">
@@ -44,7 +70,7 @@
         </li>
         <li class="treeview">
             <a href="javascript:void(0)">
-                <i class="fas fa-list"></i>
+                <i class="fas fa-object-group"></i>
                 <span>Group</span>
                 <i class="fas fa-angle-right"></i></a>
             <ul class="treeview-menu">
@@ -54,7 +80,7 @@
         </li>
         <li class="treeview">
             <a href="javascript:void(0)">
-                <i class="fas fa-list"></i>
+                <i class="fas fa-puzzle-piece"></i>
                 <span>Section</span>
                 <i class="fas fa-angle-right"></i></a>
             <ul class="treeview-menu">
@@ -65,7 +91,7 @@
         </li>
         <li class="treeview">
             <a href="javascript:void(0)">
-                <i class="fas fa-list"></i>
+                <i class="fab fa-delicious"></i>
                 <span>Subject</span>
                 <i class="fas fa-angle-right"></i></a>
             <ul class="treeview-menu">
@@ -75,7 +101,7 @@
         </li>
         <li class="treeview">
             <a href="javascript:void(0)">
-                <i class="fas fa-list"></i>
+                <i class="fas fa-cog"></i>
                 <span>Syllabus</span>
                 <i class="fas fa-angle-right"></i></a>
             <ul class="treeview-menu">
@@ -83,6 +109,7 @@
                 <li><a href="#">Syllabus List</a></li>
             </ul>
         </li>
+
         <li class="nav-title">Routine manage</li>
         <li class="treeview">
             <a href="javascript:void(0)">
@@ -104,29 +131,7 @@
                 <li><a href="#">New Exam Routine</a></li>
                 <li><a href="#">Exam Routine list</a></li>
             </ul>
-        </li>
-        <li class="nav-title">People manage</li>
-        <li class="treeview">
-            <a href="javascript:void(0)">
-                <i class="fas fa-list"></i>
-                <span>Class Routine</span>
-                <i class="fas fa-angle-right"></i></a>
-            <ul class="treeview-menu">
-                <li><a href="#">New Class Routine</a></li>
-                <li><a href="#">Class Routine list</a></li>
-            </ul>
-        </li>
-        <li class="treeview">
-            <a href="javascript:void(0)">
-                <i class="fas fa-list"></i>
-                <span>Exam Routine</span>
-                <i class="fas fa-angle-right"></i></a>
-            <ul class="treeview-menu">
-                <li><a href="#">Exam Category</a></li>
-                <li><a href="#">New Exam Routine</a></li>
-                <li><a href="#">Exam Routine list</a></li>
-            </ul>
-        </li>
+        </li>        
         <li class="nav-title">Website Manage</li>
         <li class="treeview">
             <a href="javascript:void(0)">
@@ -138,6 +143,7 @@
                 <li><a href="{{ route('notice.index') }}">Notice List</a></li>
             </ul>
         </li>
+
         <li class="treeview">
             <a href="javascript:void(0)">
                 <i class="fas fa-envelope"></i>

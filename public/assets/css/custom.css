@@ -93,3 +93,132 @@
     color: #a9a9a9 !important;
     font-size: 12px;
 }
+
+/* custom style of select2 */
+.select2 {
+    width: 100% !important;
+}
+
+.select2-container--default .select2-selection--single {
+    border-radius: 0px;
+    height: 34px;
+    border: 1px solid #DDD;
+}
+
+.bg-custom-color-violate {
+    background-color: #673AB7!important;
+}
+
+.th-color-white {
+    color: #FFF !important;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    padding-top: 10px !important;
+}
+
+.dataTables_filter input {
+    border: 1px solid #b3b3b3;
+    padding: 5px;
+    min-width: 200px;
+}
+
+.paginate_button {
+    background: #cacaca !important;
+    padding: 5px 10px !important;
+    border: 0px solid #DDD !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, 
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    background: #673ab7 !important;
+    color: white !important;
+}
+
+table.dataTable thead th, table.dataTable thead td,
+table.dataTable.no-footer {
+    border: inherit;
+}   
+
+.customDataTableSelect select {
+    border: 1px solid #DDD;
+    padding: 3px 5px;
+    cursor: pointer;
+    background: #FFF
+}
+
+.dt-buttons {
+    display: inline-block;
+    position: relative;
+}
+
+.dt-button {
+    background: #DDD;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 2px;
+}
+
+.dt-button:hover {
+    background: #007bff;
+    color: #FFF;
+    transition: 0.25s;
+}
+.dt-button.buttons-collection {
+    background: #FFF0;
+    border: 1px solid #DDD;
+}
+
+.dt-button.buttons-collection:hover {
+    color: #000;
+}
+
+.dt-button-collection {
+    position: absolute;
+    top: 32px !important;
+    right: 0px;
+    width: 125px;
+    background: #ffffff;
+    left: auto !important;
+    border: 1px solid #DDD !important;
+}
+
+
+.dt-button.button-page-length {
+    display: block !important;
+    float: none;
+    background:#b7747400;
+    width: 100%;
+    border-radius: 0px  !important;
+    border-bottom: 1px solid #DDD;
+}
+
+.dt-button.buttons-copy {
+    background: #007bff;
+    color: #FFF;
+}
+
+.dt-button.buttons-excel {
+    background: #009688;
+    color: #FFF;
+}
+
+.dt-button.buttons-csv {
+    background: #9C27B0;
+    color: #FFF;
+}
+
+.dt-button.buttons-pdf {
+    background: #F44336;
+    color: #FFF;
+}
+
+.dt-button.buttons-print {
+    background: #444444;
+    color: #FFF;
+}
+
+.dt-button.button-page-length:hover, 
+.dt-button.button-page-length.active {
+    color: #673ab7;
+}

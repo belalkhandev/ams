@@ -19,6 +19,7 @@ class CreateSubjectsTable extends Migration
             $table->unsignedBigInteger('group_id')->nullable();
             $table->string('name');
             $table->string('code')->nullable();
+            $table->string('photo')->nullable();
             $table->integer('status')->default(1)->comment('1=active, 0=inactive');
             $table->timestamps();
 

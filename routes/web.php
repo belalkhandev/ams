@@ -104,12 +104,20 @@ Route::middleware(['auth'])->group(function () {
                 Route::get('/', 'AdmissionController@index')->name('admission.index');
                 Route::get('/create', 'AdmissionController@create')->name('admission.create');
                 Route::post('/create', 'AdmissionController@store')->name('admission.store');
-                Route::get('/{id}/edit', 'AdmissionController@edit')->name('admission.edit');
-                Route::put('/{id}/edit', 'AdmissionController@update')->name('admission.update');
-                Route::delete('/{id}', 'AdmissionController@destroy')->name('admission.destroy');
+                // Route::get('/{id}/edit', 'AdmissionController@edit')->name('admission.edit');
+                // Route::put('/{id}/edit', 'AdmissionController@update')->name('admission.update');
+                // Route::delete('/{id}', 'AdmissionController@destroy')->name('admission.destroy');
             });
 
-            //Notice  manage
+            Route::prefix('student')->group(function () {
+                Route::get('/', 'StudentController@index')->name('student.index');
+                Route::get('/{id}/show', 'StudentController@show')->name('student.show');           
+                Route::get('/{id}/edit', 'StudentController@edit')->name('student.edit');           
+                Route::post('/{id}/edit', 'StudentController@update')->name('student.update');           
+                Route::delete('/{id}/show', 'StudentController@delete')->name('student.destroy');           
+            });
+
+            //frontend Notice  manage
             Route::prefix('notice')->group(function () {
                 Route::get('/', 'NoticeController@index')->name('notice.index');
                 Route::get('/show/{id}', 'NoticeController@show')->name('notice.show');
@@ -120,7 +128,7 @@ Route::middleware(['auth'])->group(function () {
                 Route::delete('/{id}', 'NoticeController@destroy')->name('notice.destroy');
             });
 
-            //Notice  manage
+            //frontend slider  manage
             Route::prefix('slider')->group(function () {
                 Route::get('/', 'SliderController@index')->name('slider.index');
                 Route::get('/create', 'SliderController@create')->name('slider.create');

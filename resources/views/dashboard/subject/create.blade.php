@@ -26,14 +26,20 @@
                         <span class="text-danger">{{ $errors->first('name') }}</span>
                     </div>
                     <div class="form-group">
-                            <label for="">Subject Code</label>
-                            <input type="text" name="code" class="form-control" placeholder="Enter subject code">
-                            <span class="text-danger">{{ $errors->first('code') }}</span>
-                        </div>
+                        <label for="">Subject Code</label>
+                        <input type="text" name="code" class="form-control" placeholder="Enter subject code">
+                        <span class="text-danger">{{ $errors->first('code') }}</span>
+                    </div>
                     <div class="form-group">
                         <label for="">Status</label>
                         {!! Form::select('status', getStatus(), null, ['placeholder' => 'Select Status', 'class' => 'form-control']) !!}
                         <span class="text-danger">{{ $errors->first('status') }}</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Cover Photo</label>
+                        <br>
+                        <input type="file" name="cover_photo">
+                        <span class="text-danger">{{ $errors->first('cover_photo') }}</span>
                     </div>
                 </div>
                 <div class="box-footer">

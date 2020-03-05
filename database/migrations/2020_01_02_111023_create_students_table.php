@@ -17,6 +17,7 @@ class CreateStudentsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->string('student_id');
+            $table->string('id_type')->default('system-define')->comment('system-define, user-define');
             $table->string('first_name');
             $table->string('last_name')->nullable();
             $table->string('father_name');
@@ -39,10 +40,13 @@ class CreateStudentsTable extends Migration
             $table->string('photo')->nullable();
             $table->string('father_photo')->nullable();
             $table->string('mother_photo')->nullable();
+            $table->unsignedBigInteger('guardian_id');
+            $table->string('relation', 50)->comment('relation with guardian');
             $table->integer('status')->default(1)->comment('1=active, 0=inactive');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('guardian_id')->references('id')->on('guardians')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

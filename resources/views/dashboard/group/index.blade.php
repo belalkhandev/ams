@@ -26,10 +26,10 @@
                                 <td class="inline-element">
                                     <a href="{{ route('group.edit', $group->id) }}" data-toggle="tooltip" title="Delete" data-placement="top" class="custom-btn-sm btn btn-primary"><i class="fas fa-edit"></i></a>
                                     {!! Form::open(['route' => ['group.destroy', $group->id], 'method' => 'DELETE', 'class'=>'inline-el']) !!}
-                                    <button type="submit" class="btn btn-danger custom-btn-sm" onclick="deleteSwal(this, event)" data-toggle="tooltip" title="Delete" data-placement="top">
-                                        <i class="fas fa-trash"></i>
-                                    </button>
-                                {!! Form::close() !!}
+                                        <button type="submit" class="btn btn-danger custom-btn-sm" onclick="deleteSwal(this, event)" data-toggle="tooltip" title="Delete" data-placement="top">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    {!! Form::close() !!}
                                 </td>
                             </tr>
                         @endforeach

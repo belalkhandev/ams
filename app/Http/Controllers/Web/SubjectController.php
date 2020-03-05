@@ -4,10 +4,13 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SubjectStoreFormRequest;
+use App\Http\Requests\SubjectUpdateFormRequest;
 use App\Models\AcademicClass;
 use App\Models\Group;
 use App\Models\Subject;
+use App\Services\Utility;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SubjectController extends Controller
 {
@@ -42,6 +45,13 @@ class SubjectController extends Controller
         $subject->name = $request->get('name');   
         $subject->code = $request->get('code');   
         $subject->status = $request->get('status');
+        $path = null;
+
+        if ($request->hasFile('cover_photo')) {
+            $path = Utility::file_upload($request, 'cover_photo', 'subjects');
+        }
+
+        $subject->photo = $path;
         
         if ($subject->save()) {
             return response()->json([
@@ -55,6 +65,80 @@ class SubjectController extends Controller
             'type' => 'error',
             'title' => 'Failed!',
             'message' => 'Failed to Store Subject'
+        ]);
+    }
+
+    public function edit($id)
+    {
+        $data = [
+            'page_title' => 'Subject Update',
+            'page_header' => 'Subject Update',
+            'classes' => AcademicClass::get(),
+            'groups' => Group::get(),
+            'subject' => Subject::findOrFail($id)
+        ];
+
+        return view('dashboard.subject.edit')->with(array_merge($this->data, $data));
+    }
+
+    public function update(SubjectUpdateFormRequest $request, $id)
+    {
+        $subject = Subject::findOrFail($id);
+        $subject->academic_class_id = $request->get('class');
+        $subject->group_id = $request->get('group');
+        $subject->name = $request->get('name');
+        $subject->code = $request->get('code');
+        $subject->status = $request->get('status');
+
+        if ($request->hasFile('cover_photo')) {
+            if ($subject->photo) {
+                unlink($subject->photo);
+            }
+
+            $path = Utility::file_upload($request, 'cover_photo', 'subjects');
+            $subject->photo = $path;
+        }
+
+        if ($subject->save()) {
+            return response()->json([
+                'type' => 'success',
+                'title' => 'Success!',
+                'message' => 'Successfully Update Subject'
+            ]);
+        }
+
+        return response()->json([
+            'type' => 'error',
+            'title' => 'Failed!',
+            'message' => 'Failed to Update Subject'
+        ]);
+    }
+    
+
+    public function destroy(Subject $subject, $id)
+    {
+        if (!Auth::user()->canDo(['manage_admin'])) {
+            abort(401, 'Unauthorized Access.');
+        }
+
+        $subject = $subject->findOrFail($id);
+
+        if ($subject->photo) {
+            unlink($subject->photo);
+        }
+
+        if ($subject->delete()) {
+            return response()->json([
+                'type' => 'success',
+                'title' => 'Success!',
+                'message' => 'Subject Deleted Successfully'
+            ]);
+        }
+
+        return response()->json([
+            'type' => 'error',
+            'title' => 'Failed!',
+            'message' => 'Failed to Delete Subject'
         ]);
     }
 }
