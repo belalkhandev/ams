@@ -17,7 +17,7 @@ class CreateDepartmentsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->text('department_details')->nullable();
-            $table->integer('active')->default(1)->comment('0=inactive,1=active');
+            $table->integer('status')->default(1)->comment('0=inactive,1=active');
             $table->timestamps();
         });
     }

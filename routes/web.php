@@ -49,6 +49,16 @@ Route::middleware(['auth'])->group(function () {
                 Route::delete('/{id}', 'SessionController@destroy')->name('session.destroy');
             });
 
+            //Department manage
+            Route::prefix('department')->group(function () {
+                Route::get('/list', 'DepartmentController@index')->name('department.index');
+                Route::get('/create', 'DepartmentController@create')->name('department.create');
+                Route::post('/create', 'DepartmentController@store')->name('department.store');
+                Route::get('/{id}/edit', 'DepartmentController@edit')->name('department.edit');
+                Route::put('/{id}/edit', 'DepartmentController@update')->name('department.update');
+                Route::delete('/{id}', 'DepartmentController@destroy')->name('department.destroy');
+            });
+
             //class manage
             Route::prefix('class')->group(function () {
                 Route::get('/list', 'AcademicClassController@index')->name('class.index');
@@ -116,6 +126,17 @@ Route::middleware(['auth'])->group(function () {
                 Route::post('/{id}/edit', 'StudentController@update')->name('student.update');           
                 Route::delete('/{id}/show', 'StudentController@delete')->name('student.destroy');           
             });
+            
+            //teacher manage
+            Route::prefix('teacher')->group(function () {
+                Route::get('/', 'TeacherController@index')->name('teacher.index');
+                Route::get('/create', 'TeacherController@create')->name('teacher.create');
+                Route::post('/create', 'TeacherController@store')->name('teacher.store');
+                Route::get('/{id}/show', 'TeacherController@show')->name('teacher.show');           
+                Route::get('/{id}/edit', 'TeacherController@edit')->name('teacher.edit');           
+                Route::post('/{id}/edit', 'TeacherController@update')->name('teacher.update');           
+                Route::delete('/{id}/show', 'TeacherController@delete')->name('teacher.destroy');           
+            });
 
             //frontend Notice  manage
             Route::prefix('notice')->group(function () {
@@ -140,8 +161,6 @@ Route::middleware(['auth'])->group(function () {
 
         });
 
-        
-        
         
     });
 });

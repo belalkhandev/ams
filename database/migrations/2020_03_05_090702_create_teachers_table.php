@@ -16,6 +16,8 @@ class CreateTeachersTable extends Migration
         Schema::create('teachers', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
+            $table->string('teacher_id');
+            $table->string('id_type')->default('system-define')->comment('system-define, user-define');
             $table->string('first_name');
             $table->string('last_name');
             $table->string('father_name');
@@ -33,7 +35,7 @@ class CreateTeachersTable extends Migration
             $table->text('details')->nullable();
             $table->string('photo')->nullable();
             $table->string('resume')->nullable();
-            $table->integer('active')->default(1)->comment('0=inactive,1=active');
+            $table->integer('status')->default(1)->comment('0=inactive,1=active');
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
         });

@@ -8,12 +8,12 @@
                     <h3 class="box-title">New Admission</h3>
                     <a href="{{ route('admission.index') }}" class="btn btn-sm btn-primary float-right">Admission List</a>
                 </div>
-                {!! Form::open() !!}
+                {!! Form::open(['route' => 'admission.store', 'method' => 'post']) !!}
                 <div class="box-body">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-section">
-                                <h3 class="form-section-title">Academic Information</h3>
+                                <h3 class="form-section-ti tle">Academic Information</h3>
                             </div>
                         </div>
                     </div>

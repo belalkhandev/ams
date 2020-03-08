@@ -2,13 +2,39 @@
 if (!function_exists('getGenderType')) {
     function getGenderType()
     {
-
         $genders = [
             'male' => 'Male',
             'female' => 'Female',
         ];
 
         return $genders;
+    }
+}
+
+
+if (!function_exists('getMaritalStatus')) {
+    function getMaritalStatus()
+    {
+
+        $status = [
+            'Married' => 'Married',
+            'Unmarried' => 'Unmarried',
+        ];
+
+        return $status;
+    }
+}
+
+if (!function_exists('getJobType')) {
+    function getJobType()
+    {
+
+        $types = [
+            'permanent' => 'Permanent',
+            'temporary' => 'Temporary',
+        ];
+
+        return $types;
     }
 }
 

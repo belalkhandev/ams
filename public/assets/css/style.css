@@ -423,6 +423,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    border:0px solid #FFFF !important;
 }
 
 .inline-element a,

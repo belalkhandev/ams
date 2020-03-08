@@ -41,13 +41,22 @@
                 <span>Teacher Information</span>
                 <i class="fas fa-angle-right"></i></a>
             <ul class="treeview-menu">
-                <li><a href="#">New Teacher</a></li>
-                <li><a href="#">Teacher List</a></li>
-                <li><a href="#">Teacher History</a></li>
+                <li><a href="{{ route('teacher.create') }}">New Teacher</a></li>
+                <li><a href="{{ route('teacher.index') }}">Teacher List</a></li>
             </ul>
         </li>
 
         <li class="nav-title">Academic manage</li>
+        <li class="treeview">
+            <a href="javascript:void(0)">
+                <i class="fas fa-box"></i>
+                <span>Department</span>
+                <i class="fas fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+                <li><a href="{{ route('department.create') }}">New Department</a></li>
+                <li><a href="{{ route('department.index') }}">Department List</a></li>
+            </ul>
+        </li>
         <li class="treeview">
             <a href="javascript:void(0)">
                 <i class="fas fa-database"></i>
@@ -108,7 +117,7 @@
                 <li><a href="#">New Syllabus</a></li>
                 <li><a href="#">Syllabus List</a></li>
             </ul>
-        </li>
+        </li> 
 
         <li class="nav-title">Routine manage</li>
         <li class="treeview">

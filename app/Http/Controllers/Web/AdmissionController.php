@@ -77,6 +77,7 @@ class AdmissionController extends Controller
             //get student ID generate
             if ($request->get('student_id_checked')) {
                 $student_id = $request->get('student_id');
+                $id_type = 'user-define';
             } else {
                 $admissions = Student::where('id_type', 'system-define')->orderBy('id', 'desc')->get();
                 $year = Carbon::now()->year;
@@ -92,6 +93,8 @@ class AdmissionController extends Controller
                 } else {
                     $student_id = $year . '001';
                 }
+
+                $id_type = 'system-define';
             }
 
             $flag = 0;
@@ -126,6 +129,7 @@ class AdmissionController extends Controller
             $student = new Student();
             $student->user_id = $user->id;
             $student->student_id = $student_id;
+            $student->id_type = $id_type;
             $student->first_name = $request->get('firstname');
             $student->last_name = $request->get('lastname');
             $student->father_name = $request->get('father_name');
