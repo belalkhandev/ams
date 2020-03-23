@@ -222,3 +222,41 @@ table.dataTable.no-footer {
 .dt-button.button-page-length.active {
     color: #673ab7;
 }
+
+.sidebar-area::-webkit-scrollbar {
+    width: 3px;
+    display: block;
+}
+
+.sidebar-area:hover::-webkit-scrollbar {
+    display: block;
+}
+ 
+.sidebar-area::-webkit-scrollbar-track {    
+    width: 100%;
+    background: #242939;
+}
+ 
+.sidebar-area::-webkit-scrollbar-thumb {
+    width: 100%;
+    background: #576180;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    display: block;
+}
+
+:hover::-webkit-scrollbar {
+    display: block;
+}
+ 
+::-webkit-scrollbar-track {    
+    width: 100%;
+    background: #ffffff;
+}
+ 
+::-webkit-scrollbar-thumb {
+    width: 100%;
+    background: #007bff;
+    cursor: pointer;
+}
