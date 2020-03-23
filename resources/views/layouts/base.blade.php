@@ -30,6 +30,7 @@
     <script src="{{ asset('assets/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/select2/select2.min.js') }}"></script>
     <script src="{{ asset('assets/js/submitter.js') }}"></script>
+    <script src="{{ asset('assets/js/navigation.js') }}"></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
     @stack('footer-styles')
     @stack('footer-scripts')

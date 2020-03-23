@@ -16,12 +16,10 @@
             }
         })
 
-       
-
-        //navigation active
-        $(document).on('click', '.treeview a', function () {
-            $(this).closest('.treeview').toggleClass('active').siblings('.treeview').removeClass('active');
-        });
+        // //navigation active
+        // $(document).on('click', '.treeview a', function () {
+        //     $(this).closest('.treeview').toggleClass('active').siblings('.treeview').removeClass('active');
+        // });
 
         //hide sidebar
         $(document).on('click', '.hide-nav', function () {

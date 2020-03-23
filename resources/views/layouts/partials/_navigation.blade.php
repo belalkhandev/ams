@@ -1,5 +1,5 @@
 <nav class="navigation-menu">
-    <ul>
+    <ul class="sidebar-menu" data-widget="tree">
         <li><a href="{{ route('dashboard') }}" class="index-link"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
         <li class="treeview">
             <a href="javascript:void(0)">

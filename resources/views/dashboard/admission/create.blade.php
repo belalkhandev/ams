@@ -13,7 +13,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-section">
-                                <h3 class="form-section-ti tle">Academic Information</h3>
+                                <h3 class="form-section-title">Academic Information</h3>
                             </div>
                         </div>
                     </div>
