@@ -425,11 +425,11 @@ body {
     transition: 0.25s;
 }
 
-.inline-element {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border:0px solid #FFFF !important;
+.inline-element a, 
+.inline-element form, 
+.inline-element .btn,
+.inline-element button {
+    display: inline-block;
 }
 
 .inline-element a,
