@@ -118,6 +118,24 @@ if (!function_exists('getBloodGroups')) {
     }
 }
 
+
+if (!function_exists('getDaysList')) {
+    function getDaysList() {
+
+        $days = [
+            'Saturday' => 'Saturday',
+            'Sunday' => 'Sunday',
+            'Monday' => 'Monday',
+            'Tuesday' => 'Tuesday',
+            'Wednesday' => 'Wednesday',
+            'Thursday' => 'Thursday',
+            'Friday' => 'Friday',
+        ];
+
+        return $days;
+    }
+}
+
 if (!function_exists('styleStatus')) {
     function styleStatus($value)
     {

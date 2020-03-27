@@ -14,8 +14,7 @@
                             <i class="fas fa-search"></i>
                         </div>
                     </div>
-                    <input type="text" class="form-control" id="navbarForm"
-                        placeholder="Search Keyword......">
+                    <input type="text" class="form-control" id="navbarForm" placeholder="Search Keyword......">
                 </div>
             </form>
         </div>

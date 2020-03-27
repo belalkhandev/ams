@@ -27,7 +27,7 @@
                                     <tr>
                                         <td>{{ $key+1 }}</td>
                                         <td>{{ $subject->academicClass->name }}</td>
-                                        <td>{{ $subject->group->name }}</td>
+                                        <td>{{ $subject->group? $subject->group->name : "" }}</td>
                                         <td>{{ $subject->name }}</td>
                                         <td>{{ $subject->code }}</td>
                                         <td>{!! styleStatus($subject->status) !!}</td>

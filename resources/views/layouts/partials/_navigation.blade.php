@@ -126,8 +126,9 @@
                 <span>Class Routine</span>
                 <i class="fas fa-angle-right"></i></a>
             <ul class="treeview-menu">
-                <li><a href="#">New Class Routine</a></li>
-                <li><a href="#">Class Routine list</a></li>
+                <li><a href="{{ route('class-routine.create') }}">New Class Routine</a></li>
+                <li><a href="{{ route('class-routine.index') }}">Class Routine list</a></li>
+                <li><a href="{{ route('day.index') }}">Day Manage</a></li>
             </ul>
         </li>
         <li class="treeview">

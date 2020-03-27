@@ -11,18 +11,6 @@
 |
 */
 
-// frontendController
-Route::namespace('Web')->group(function () {
-    Route::get('/', 'FrontendController@index')->name('frontend.home');
-    Route::get('/about', 'FrontendController@about')->name('frontend.about');
-    Route::get('/under-construction', 'FrontendController@uncerConstruction')->name('frontend.under.construction');
-    
-    Route::prefix('notice')->group(function () {
-        Route::get('/list', 'FrontendController@noticeList')->name('frontend.notice.list');
-        Route::get('/show/{id}', 'FrontendController@showNotice')->name('frontend.notice.show');
-    });
-});
-
 //Auth::routes();
 
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -136,6 +124,25 @@ Route::middleware(['auth'])->group(function () {
                 Route::get('/{id}/edit', 'TeacherController@edit')->name('teacher.edit');           
                 Route::post('/{id}/edit', 'TeacherController@update')->name('teacher.update');           
                 Route::delete('/{id}/show', 'TeacherController@delete')->name('teacher.destroy');           
+            });
+
+            //routine manage
+            Route::prefix('day')->group(function () {
+                Route::get('/list', 'DayController@index')->name('day.index');
+                Route::get('/create', 'DayController@create')->name('day.create');
+                Route::post('/create', 'DayController@store')->name('day.store');
+                Route::get('/{id}/edit', 'DayController@edit')->name('day.edit');
+                Route::put('/{id}/edit', 'DayController@update')->name('day.update');
+                Route::delete('/{id}', 'DayController@destroy')->name('day.destroy');
+            });
+
+            Route::prefix('classroutine')->group(function () {
+                Route::get('/list', 'ClassRoutineController@index')->name('class-routine.index');
+                Route::get('/create', 'ClassRoutineController@create')->name('class-routine.create');
+                Route::post('/create', 'ClassRoutineController@store')->name('class-routine.store');
+                Route::get('/{id}/edit', 'ClassRoutineController@edit')->name('class-routine.edit');
+                Route::put('/{id}/edit', 'ClassRoutineController@update')->name('class-routine.update');
+                Route::delete('/{id}', 'ClassRoutineController@destroy')->name('class-routine.destroy');
             });
 
             //frontend Notice  manage

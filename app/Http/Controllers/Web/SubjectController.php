@@ -39,6 +39,16 @@ class SubjectController extends Controller
 
     public function store(SubjectStoreFormRequest $request)
     {
+        //check existing subject
+        $is_exists = Subject::where('name', $request->get('name'))->where('academic_class_id', $request->get('class'))->orWhere('code', $request->get('code'))->first();
+
+        if ($is_exists) {
+            return response()->json([
+                'type' => 'warning',
+                'title' => 'Already Exists!',
+                'message' => 'Subject already exists'
+            ]);
+        }
         $subject = new Subject();
         $subject->academic_class_id = $request->get('class');   
         $subject->group_id = $request->get('group');   

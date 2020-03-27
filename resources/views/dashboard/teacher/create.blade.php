@@ -163,7 +163,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Educational Qualification</label>
-                                <input type="text" name="qualification" class="form-control datepicker" placeholder="Enter qualification">
+                                <input type="text" name="qualification" class="form-control" placeholder="Enter qualification">
                                 <span class="text-danger">{{ $errors->first('qualification') }}</span>
                             </div>
                         </div>
