@@ -137,7 +137,8 @@ Route::middleware(['auth'])->group(function () {
             });
 
             Route::prefix('classroutine')->group(function () {
-                Route::get('/list', 'ClassRoutineController@index')->name('class-routine.index');
+                Route::get('/show', 'ClassRoutineController@index')->name('class-routine.index');
+                Route::post('/show', 'ClassRoutineController@filterRoutine')->name('class-routine.criteria');
                 Route::get('/create', 'ClassRoutineController@create')->name('class-routine.create');
                 Route::post('/create', 'ClassRoutineController@store')->name('class-routine.store');
                 Route::get('/{id}/edit', 'ClassRoutineController@edit')->name('class-routine.edit');
@@ -164,6 +165,11 @@ Route::middleware(['auth'])->group(function () {
                 Route::get('/{id}/edit', 'SliderController@edit')->name('slider.edit');
                 Route::put('/{id}/edit', 'SliderController@update')->name('slider.update');
                 Route::delete('/{id}', 'SliderController@destroy')->name('slider.destroy');
+            });
+
+            //ajax-routes
+            Route::prefix('ajax-find')->group(function () {
+                Route::post('/subjects', 'AjaxFindController@getSubjects')->name('ajax-find.subject');
             });
 
         });

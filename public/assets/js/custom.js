@@ -11,19 +11,20 @@
                  $('.index-link').closest('li').addClass('active');
                  return false;
              }else if ($this.attr('href').indexOf(current) !== -1) {
-                $this.closest('.treeview').addClass('active');
+                $this.closest('.treeview').addClass('nav-open');
+                $this.closest('.treeview-menu').show();
                 $this.closest('li').addClass('active');
             }
-        })
-
-        // //navigation active
-        // $(document).on('click', '.treeview a', function () {
-        //     $(this).closest('.treeview').toggleClass('active').siblings('.treeview').removeClass('active');
-        // });
+        });
 
         //hide sidebar
         $(document).on('click', '.hide-nav', function () {
             $('.sidebar-area').toggleClass('hide-sidebar');
+        });
+
+        $('.criteria-box').hide();
+        $(document).on('click', '#criteria-box', function() {
+            $('.criteria-box').slideToggle('slow');
         });
 
     });

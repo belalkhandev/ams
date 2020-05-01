@@ -32,7 +32,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Status</label>
-                        {!! Form::select('status', getStatus(), null, ['placeholder' => 'Select Status', 'class' => 'form-control']) !!}
+                        {!! Form::select('status', getStatus(), 1, ['placeholder' => 'Select Status', 'class' => 'form-control']) !!}
                         <span class="text-danger">{{ $errors->first('status') }}</span>
                     </div>
                     <div class="form-group">

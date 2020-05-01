@@ -6,7 +6,7 @@
             <div class="box">
                 <div class="box-header">
                     <h3 class="box-title">Admission list</h3>
-                    <a href="{{ route('admission.create') }}" class="btn btn-sm btn-primary float-right">New Admission</a>
+                    <a href="{{ route('admission.create') }}" class="btn btn-sm btn-custom-gray float-right">New Admission</a>
                 </div>
                 <div class="box-body">
                     <table class="table">

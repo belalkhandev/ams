@@ -19,7 +19,8 @@ class SubjectController extends Controller
         $data = [
             'page_title' => 'Subject List',
             'page_header' => 'Subject List',
-            'subjects' => Subject::get()
+            'subjects' => Subject::get(),
+            'classes' => AcademicClass::get()
         ];
 
         return view('dashboard.subject.index')->with(array_merge($this->data, $data));
@@ -40,7 +41,11 @@ class SubjectController extends Controller
     public function store(SubjectStoreFormRequest $request)
     {
         //check existing subject
-        $is_exists = Subject::where('name', $request->get('name'))->where('academic_class_id', $request->get('class'))->orWhere('code', $request->get('code'))->first();
+        $is_exists = Subject::where('name', $request->get('name'))->where('academic_class_id', $request->get('class'))->first();
+        
+        if ($request->get('code')) {
+            $is_exists = Subject::where('code', $request->get('code'))->first();
+        }
 
         if ($is_exists) {
             return response()->json([

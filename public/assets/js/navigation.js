@@ -3,7 +3,7 @@
  * Converts a nested list into a multilevel
  * tree view menu.
  *
- * @Usage: $('.my-menu').tree(options)
+ * @Usage: $('.navigation-menu').tree(options)
  *         or add [data-widget="tree"] to the ul element
  *         Pass any option as data-option="value"
  */
@@ -22,14 +22,14 @@
         tree: '.tree',
         treeview: '.treeview',
         treeviewMenu: '.treeview-menu',
-        open: '.active',
+        open: '.nav-open, .active',
         li: 'li',
         data: '[data-widget="tree"]',
         active: '.active'
     };
 
     var ClassName = {
-        open: 'active',
+        open: 'nav-open',
         tree: 'tree'
     };
 
