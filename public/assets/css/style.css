@@ -200,6 +200,20 @@ body {
     color: #01CB63;
 }
 
+.sidebar-menu li ul {
+    position: relative;
+}
+
+.sidebar-menu li ul::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: #01cb63;
+    content: ''
+}
+
 .sidebar-menu a .fa-angle-right {
     -webkit-transition-duration: 500ms;
     -o-transition-duration: 500ms;

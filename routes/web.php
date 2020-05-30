@@ -25,7 +25,9 @@ Route::middleware(['auth'])->group(function () {
             Route::get('/', 'DashboardController@index')->name('admin');
             Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
             Route::get('/home', 'DashboardController@index')->name('home');
-
+            
+            Route::get('/change-password', 'UserController@changePassword')->name('change-password');
+            Route::post('/change-password', 'UserController@updatePassword')->name('update-password');
 
             //Session manage
             Route::prefix('session')->group(function () {
