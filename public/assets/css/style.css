@@ -691,6 +691,7 @@ body {
 
 .tab-box {
     background: #FFFFFF;
+    margin-bottom: 20px;
 }
 
 .tab-box-header {
@@ -702,7 +703,7 @@ body {
     align-items: center;
 }
 
-.tabl-box-header-title {
+.tab-box-header-title {
     font-size: 18px;
     color: #000;
 }
@@ -898,4 +899,10 @@ body {
     color: #FFF;
 }
 
-/* custom table design */
+.note {
+    background: #ffff8e;
+    padding: 3px 5px;
+    color: #2d2d2d;
+    font-size: 12px;
+    margin-bottom: 10px;
+}

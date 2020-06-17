@@ -148,6 +148,28 @@ Route::middleware(['auth'])->group(function () {
                 Route::delete('/{id}', 'ClassRoutineController@destroy')->name('class-routine.destroy');
             });
 
+
+            Route::prefix('exam')->group(function () {
+                Route::get('/settings', 'ExamSettingsController@index')->name('exam.settings');
+
+                Route::prefix('/exam-mark')->group(function () {
+                    Route::post('/add', 'ExamTypeController@storeExamMark')->name('exam-mark.store');
+                    Route::post('/edit/{id}', 'ExamTypeController@updateExamMark')->name('exam-mark.update');
+                });
+
+                Route::prefix('/exam-term')->group(function () {
+                    Route::get('/add', 'ExamTypeController@addExamTerm')->name('exam-term.add');
+                    Route::post('/add', 'ExamTypeController@storeExamTerm')->name('exam-term.store');
+                });
+
+                Route::prefix('/grade')->group(function () {
+                    Route::get('/add', 'ExamTypeController@addGrade')->name('grade.add');
+                    Route::post('/add', 'ExamTypeController@storeGrade')->name('grade.store');
+                });
+
+            });
+            
+
             //frontend Notice  manage
             Route::prefix('notice')->group(function () {
                 Route::get('/', 'NoticeController@index')->name('notice.index');

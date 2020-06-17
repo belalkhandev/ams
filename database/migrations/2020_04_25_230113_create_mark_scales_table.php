@@ -15,7 +15,8 @@ class CreateMarkScalesTable extends Migration
     {
         Schema::create('mark_scales', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
+            $table->string('name')->nullable();
+            $table->double('equal_one', 8,2)->default(1);
             $table->double('out_of', 8,2)->nullable();
             $table->boolean('status')->default(true);
             $table->timestamps();

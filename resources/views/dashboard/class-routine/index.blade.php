@@ -28,7 +28,7 @@
 
     <div class="tab-box">
         <div class="tab-box-header">
-            <h3 class="tabl-box-header-title">Class Routine</h3>
+            <h3 class="tab-box-header-title">Class Routine</h3>
             <div class="tab-box-header-action">
                 <button id="criteria-box" class="btn btn-custom-success"><i class="fas fa-angle-up"></i> Criteria</button>
                 <a href="{{ route('class-routine.create') }}" class="btn btn-custom-gray"> Add new</a>
