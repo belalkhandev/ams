@@ -8,24 +8,32 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="welcome-slides owl-carousel" id="welcomeSlider">
-                        <div class="single-slide">
-                            <img src="{{ asset('frontend/assets/images/slider-1.jpg') }}" alt="">
-                            <!-- <div class="slide-caption">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas facere aspernatur adipisci dolore, dolor nam consectetur! Inventore aliquam natus similique!</p>
-                            </div> -->
-                        </div>
-                        <div class="single-slide">
-                            <img src="{{ asset('frontend/assets/images/slider-1.jpg') }}" alt="">
-                            <!-- <div class="slide-caption">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas facere aspernatur adipisci dolore, dolor nam consectetur! Inventore aliquam natus similique!</p>
-                            </div> -->
-                        </div>
-                        <div class="single-slide">
-                            <img src="{{ asset('frontend/assets/images/slider-1.jpg') }}" alt="">
-                            <!-- <div class="slide-caption">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas facere aspernatur adipisci dolore, dolor nam consectetur! Inventore aliquam natus similique!</p>
-                            </div> -->
-                        </div>
+                        @if($sliders->isNotEmpty())
+                            @foreach($sliders as $slider)
+                                <div class="single-slide">
+                                    <img src="{{ asset($slider->slide_photo) }}" alt="">
+                                </div>
+                            @endforeach
+                            @else
+                            <div class="single-slide">
+                                <img src="{{ asset('frontend/assets/images/slider-1.jpg') }}" alt="">
+                                <!-- <div class="slide-caption">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas facere aspernatur adipisci dolore, dolor nam consectetur! Inventore aliquam natus similique!</p>
+                                </div> -->
+                            </div>
+                            <div class="single-slide">
+                                <img src="{{ asset('frontend/assets/images/slider-1.jpg') }}" alt="">
+                                <!-- <div class="slide-caption">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas facere aspernatur adipisci dolore, dolor nam consectetur! Inventore aliquam natus similique!</p>
+                                </div> -->
+                            </div>
+                            <div class="single-slide">
+                                <img src="{{ asset('frontend/assets/images/slider-1.jpg') }}" alt="">
+                                <!-- <div class="slide-caption">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas facere aspernatur adipisci dolore, dolor nam consectetur! Inventore aliquam natus similique!</p>
+                                </div> -->
+                            </div>
+                        @endif
                     </div>
                 </div>
             </div>

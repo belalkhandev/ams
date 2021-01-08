@@ -158,8 +158,8 @@ Route::middleware(['auth'])->group(function () {
                 });
 
                 Route::prefix('/exam-term')->group(function () {
-                    Route::get('/add', 'ExamTypeController@addExamTerm')->name('exam-term.add');
-                    Route::post('/add', 'ExamTypeController@storeExamTerm')->name('exam-term.store');
+                    Route::post('/add', 'ExamTermController@store')->name('exam-term.store');
+                    Route::delete('/delete/{id}', 'ExamTermController@delete')->name('exam-term.delete');
                 });
 
                 Route::prefix('/grade')->group(function () {

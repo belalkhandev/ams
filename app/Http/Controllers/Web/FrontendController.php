@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use App\Models\Notice;
+use App\Models\Slider;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,8 @@ class FrontendController extends Controller
             'notices' => Notice::orderBy('publish_date', 'desc')
                                 ->orderBy('id', 'desc')
                                 ->whereDate('publish_date', '<=', Carbon::now())
-                                ->get()->take(15)
+                                ->get()->take(15),
+            'sliders' => Slider::orderBy('id', 'DESC')->get()
         ];
 
         return view('frontend.index')->with(array_merge($this->data, $data));

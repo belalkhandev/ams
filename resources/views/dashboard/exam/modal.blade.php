@@ -77,3 +77,35 @@
     </div>
 </div>
 @endif
+
+
+{{-- exam term modal --}}
+<div class="modal fade" id="addExamTerm"  data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Exam Term</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {!! Form::open(['route' => 'exam-term.store']) !!}
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="text" name="name" placeholder="Enter term name" class="form-control">
+                    <span class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Total Marks</label>
+                    <input type="number" name="marks" placeholder="Enter total marks" class="form-control">
+                    <span class="text-danger"></span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success btn-sm" onclick="submit_form(this, event)">Save</button>
+            </div>
+            {!! Form::close() !!}
+        </div>
+    </div>
+</div>
