@@ -14,8 +14,7 @@
                             <i class="fas fa-search"></i>
                         </div>
                     </div>
-                    <input type="text" class="form-control" id="navbarForm"
-                        placeholder="Search Keyword......">
+                    <input type="text" class="form-control" id="navbarForm" placeholder="Search Keyword......">
                 </div>
             </form>
         </div>
@@ -52,7 +51,7 @@
                     <div class="dropdown-menu user-dropdown" aria-labelledby="userDrowdown">
                         <div class="dropdown-body">
                             <div class="user-img">
-                                <img src="assets/images/user.png" alt="">
+                                <img src="#" alt="">
                             </div>
                             <div class="user-title text-center">
                                 <h3>{{ Auth::user()->name }}</h3>
@@ -60,7 +59,7 @@
                             <div class="user-nav">
                                 <ul>
                                     <li><a href=""><i class="fas fa-user"></i> <span>Profile</span></a></li>
-                                    <li><a href=""><i class="fas fa-key"></i> <span>Change Password</span></a></li>
+                                    <li><a href="{{ route('change-password') }}"><i class="fas fa-key"></i> <span>Change Password</span></a></li>
                                     <li><a href=""><i class="fas fa-cog"></i> <span>Settings</span></a></li>
                                     <li><a href="{{ route('logout') }}"><i class="fas fa-lock"></i> <span>Logout</span></a></li>
                                 </ul>

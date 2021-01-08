@@ -3,9 +3,18 @@
 
     jQuery(document).ready(function () {
 
-        //navigation active
-        $(document).on('click', '.treeview a', function () {
-            $(this).closest('.treeview').toggleClass('active').siblings('.treeview').removeClass('active');
+        //active navigation class
+        var current = location.pathname;
+        $('.navigation-menu ul li a').each(function () {
+            var $this = $(this);
+             if (current == '/' || current == '/admin' || current == '/admin/') {
+                 $('.index-link').closest('li').addClass('active');
+                 return false;
+             }else if ($this.attr('href').indexOf(current) !== -1) {
+                $this.closest('.treeview').addClass('nav-open');
+                $this.closest('.treeview-menu').show();
+                $this.closest('li').addClass('active');
+            }
         });
 
         //hide sidebar
@@ -13,15 +22,11 @@
             $('.sidebar-area').toggleClass('hide-sidebar');
         });
 
-
-        //hide sidebar
-        $(document).on('change', '.input-remember', function () {
-            if (this.checked) {
-                console.log('true');
-            } else {
-                console.log('false');
-            }
+        $('.criteria-box').hide();
+        $(document).on('click', '#criteria-box', function() {
+            $('.criteria-box').slideToggle('slow');
         });
+
     });
 
 

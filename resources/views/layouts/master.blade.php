@@ -7,7 +7,7 @@
         <!-- sidebar-for-menu-area -->
         <aside class="sidebar-area">
             <div class="logo">
-                <a href="{{ route('dashbboard.index') }}">
+                <a href="{{ route('dashboard') }}">
                     <h1>Academic Management</h1>
                 </a>
             </div>
@@ -24,9 +24,9 @@
 
             <!-- main-content-area -->
             <div class="main-content">
-                <div class="content-page-title">
-                    <h3>@yield('page_header', 'Dashboard')</h3>
-                </div>
+                {{-- <div class="content-page-title">
+                    <h3>@yield('page_header', $page_header)</h3>
+                </div> --}}
                 <div class="content">
                     {{-- all content goes to here --}}
                     @yield('content')

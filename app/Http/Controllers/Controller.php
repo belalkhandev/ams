@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Notice;
+use Carbon\Carbon;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -26,6 +28,10 @@ class Controller extends BaseController
         $this->data = [
             'page_title' => 'Academic Management System',
             'page_header' => 'Dashboard',
+            'notices' => Notice::orderBy('publish_date', 'desc')
+                ->orderBy('id', 'desc')
+                ->whereDate('publish_date', '<=', Carbon::now())
+                ->get()->take(15)
         ];
     }
 }

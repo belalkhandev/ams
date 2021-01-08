@@ -81,7 +81,7 @@ class LoginController extends Controller
         //was any of those correct ?
         if (Auth::check()) {
             //send them where they are going 
-            return redirect()->intended('/');
+            return redirect()->intended('/admin');
         }
 
         //Nope, something wrong during authentication 
